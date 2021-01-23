@@ -12,10 +12,8 @@ namespace Momu
     using System;
     using System.Linq;
     using System.Reflection;
-    using System.Text;
     using HarmonyLib;
     using RimWorld;
-    using UnityEngine;
     using Verse;
 
     [StaticConstructorOnStartup]
@@ -98,7 +96,6 @@ namespace Momu
             } // end if
         } // end method
         
-        // Token: 0x06000019 RID: 25 RVA: 0x00002970 File Offset: 0x00000B70
         public static bool FoodUtility__AddFoodPoisoningHediffPrefix
         (Pawn pawn, Thing ingestible, FoodPoisonCause cause)
         {       
