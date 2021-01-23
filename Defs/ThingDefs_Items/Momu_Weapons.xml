@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef Name="BaseWeaponMomuRanged" Abstract="True" ParentName="BaseWeapon">
+    <techLevel>Neolithic</techLevel>
+    <weaponTags>
+      <li>Neolithic</li>
+    </weaponTags>
+    <thingCategories>
+      <li>WeaponsRanged</li>
+	  <li>MomuRanged</li>
+    </thingCategories>
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+    </comps>
+    <recipeMaker>
+      <workSpeedStat>SmithingSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <recipeUsers>
+        <li>ElectricSmithy</li>
+        <li>FueledSmithy</li>
+      </recipeUsers>
+      <effectWorking>Smelt</effectWorking>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+    </recipeMaker>
+  </ThingDef>
+
+  <ThingDef Name="BaseProjectileMomuRanged" Abstract="True">
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <thingClass>Bullet</thingClass>
+    <label>arrow</label>
+    <useHitPoints>False</useHitPoints>
+    <neverMultiSelect>True</neverMultiSelect>
+    <graphicData>
+      <shaderType>Transparent</shaderType>
+    </graphicData>
+  </ThingDef>
+
+  <!--  Ranged ======================================================== -->
+
+ 
+  <ThingDef ParentName="BaseWeaponMomuRanged">
+    <defName>Bow_Momu</defName>
+    <label>momu bow</label>
+    <description>A powerful bow made of specially treated wood and metal reinforcements. It lacks the range of a greatbow, but fires devastatingly powerful arrows.</description>
+    <graphicData>
+      <texPath>Items/Weapons/MomuBow/MomuBow</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <soundInteract>Bow_Large</soundInteract>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<costStuffCount>40</costStuffCount>
+    <costList>
+      <WoodLog>30</WoodLog>
+    </costList>
+    <statBases>
+      <WorkToMake>9000</WorkToMake>
+      <Mass>3.0</Mass>
+      <AccuracyTouch>0.65</AccuracyTouch>
+      <AccuracyShort>0.85</AccuracyShort>
+      <AccuracyMedium>0.75</AccuracyMedium>
+      <AccuracyLong>0.460</AccuracyLong>
+      <RangedWeapon_Cooldown>1.4</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>Momu</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Arrow_Momu</defaultProjectile>
+        <warmupTime>2.0</warmupTime>
+        <range>29.9</range>
+        <soundCast>Bow_Large</soundCast>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>limb</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+	<recipeMaker>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseProjectileMomuRanged">
+    <defName>Arrow_Momu</defName>
+    <label>momu arrow</label>
+    <graphicData>
+      <texPath>Things/Projectile/Arrow_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <flyOverhead>false</flyOverhead>
+      <damageDef>Arrow</damageDef>
+      <damageAmountBase>21</damageAmountBase>
+      <stoppingPower>1.9</stoppingPower>
+      <armorPenetrationBase>0.20</armorPenetrationBase>
+      <speed>49</speed>
+    </projectile>
+  </ThingDef>
+  
+
+
+  <!--  Melee ======================================================== -->
+	<ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+    <defName>MeleeWeapon_Momu_Blade</defName>
+    <label>momu blade</label>
+    <description>This unique knife has its handle grown organically from special bramblewood trees. It's rumored to give Momu courage in battle.</description>
+    <graphicData>
+      <texPath>Items/Weapons/MomuDagger/MomuDagger</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <techLevel>Medieval</techLevel>
+    <weaponTags>
+      <li>Momu</li>
+    </weaponTags>
+	<thingCategories>
+	  <li>MomuMelee</li>
+    </thingCategories>
+    <statBases>
+      <WorkToMake>8000</WorkToMake>
+      <Mass>0.85</Mass>
+    </statBases>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+	<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<costStuffCount>30</costStuffCount>
+    <costList>
+      <WoodLog>15</WoodLog>
+    </costList>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>14</power>
+        <cooldownTime>1.75</cooldownTime>
+      </li>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>14</power>
+        <cooldownTime>1.75</cooldownTime>
+      </li>
+    </tools>
+    <recipeMaker>
+	    <researchPrerequisite>Smithing</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>3</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+</Defs>

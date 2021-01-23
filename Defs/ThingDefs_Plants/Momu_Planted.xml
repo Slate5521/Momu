@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+ <Defs>
+ 
+ <ThingDef ParentName="PlantBase">
+    <defName>Plant_Sunflower</defName>
+    <label>sunflower</label>
+    <description>A tall, pretty flower that produces tasty seeds that can be used for oil.</description>
+    <statBases>
+      <MaxHitPoints>150</MaxHitPoints>
+      <Nutrition>0.3</Nutrition>
+    </statBases>
+    <graphicData>
+	<texPath>Items/Food/SunFlower/SunFlowerGrown</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <pathCost>12</pathCost>
+    <ingestible />
+    <plant>
+      <fertilityMin>0.70</fertilityMin>
+			<dieIfLeafless>true</dieIfLeafless>
+			<harvestTag>Standard</harvestTag>
+			<harvestedThingDef>SunFlowerSeeds</harvestedThingDef>
+			<harvestYield>5</harvestYield>
+			<sowTags>
+				<li>Ground</li>
+			</sowTags>
+			<topWindExposure>0.35</topWindExposure>
+			<growDays>8.3</growDays>
+      <immatureGraphicPath>Items/Food/SunFlower/SunFlowerGrowing</immatureGraphicPath>
+	  <visualSizeRange>0.3~1.4</visualSizeRange>
+      <wildOrder>2</wildOrder>
+      <purpose>Food</purpose>
+    </plant>
+  </ThingDef>
+  </Defs>

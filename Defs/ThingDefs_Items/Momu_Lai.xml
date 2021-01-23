@@ -1,0 +1,19 @@
+<Defs>
+  <ThingDef ParentName="EggFertBase">
+    <defName>LaiLarva</defName>
+    <label>lai larva</label>
+    <description>A wriggling grub, the larval stage of a Lai, one of the Momu's great moths.</description>
+    <graphicData>
+      <color>(245,245,245)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>7.0</MarketValue>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Hatcher">
+        <hatcherDaystoHatch>7</hatcherDaystoHatch>
+        <hatcherPawn>Lai</hatcherPawn>
+      </li>
+    </comps>
+  </ThingDef>
+</Defs>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+ 	<HairDef>
+		<defName>A</defName>
+		<label>hair A</label>
+		<hairGender>Any</hairGender>
+		<texPath>Pawn/Hair/a</texPath>
+		<hairTags>
+			<li>Momu</li>
+		</hairTags>
+	</HairDef>
+	
+	<HairDef>
+		<defName>C</defName>
+		<label>hair C</label>
+		<hairGender>Any</hairGender>
+		<texPath>Pawn/Hair/c</texPath>
+		<hairTags>
+			<li>Momu</li>
+		</hairTags>
+	</HairDef>
+	
+	<HairDef>
+		<defName>D</defName>
+		<label>hair D</label>
+		<hairGender>Any</hairGender>
+		<texPath>Pawn/Hair/d</texPath>
+		<hairTags>
+			<li>Momu</li>
+		</hairTags>
+	</HairDef>
+	
+	<HairDef>
+		<defName>E</defName>
+		<label>hair E</label>
+		<hairGender>Any</hairGender>
+		<texPath>Pawn/Hair/e</texPath>
+		<hairTags>
+			<li>Momu</li>
+		</hairTags>
+	</HairDef>
+	
+</Defs>

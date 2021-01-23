@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Momu", "Momu.csproj", "{1C1F8B1D-12CD-44B4-9640-8C00B9B4A51F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1C1F8B1D-12CD-44B4-9640-8C00B9B4A51F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C1F8B1D-12CD-44B4-9640-8C00B9B4A51F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C1F8B1D-12CD-44B4-9640-8C00B9B4A51F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C1F8B1D-12CD-44B4-9640-8C00B9B4A51F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3AD1C5D4-9AB8-436B-BDB9-524AC49D6116}
+	EndGlobalSection
+EndGlobal

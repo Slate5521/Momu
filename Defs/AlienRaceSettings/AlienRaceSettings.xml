@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<AlienRace.RaceSettings>
+        <defName>momuRaceSettings</defName>
+            <pawnKindSettings>
+            <startingColonists>
+                <li>
+                    <pawnKindEntries>
+                        <li>
+                            <kindDefs>
+                                <li>MomuGreenguard</li>
+                                <li>MomuCitizen</li>
+                            </kindDefs>
+                            <chance>10.0</chance>
+                        </li>
+                    </pawnKindEntries>
+                    <factionDefs>
+                        <li>MomuPlayerColony</li> 
+                    </factionDefs>
+                </li>
+            </startingColonists>
+            <alienslavekinds>
+                <li>
+                    <kindDefs>
+                        <li>MomuCitizen</li>
+                    </kindDefs>
+                    <chance>5.0</chance>
+                </li>
+            </alienslavekinds>
+            <alienrefugeekinds>
+                <li>
+                    <kindDefs>
+                        <li>MomuCitizen</li>
+                    </kindDefs>
+                    <chance>10.0</chance>
+                </li>
+            </alienrefugeekinds>
+            <alienwandererkinds>
+                <li>
+                    <pawnKindEntries>
+                        <li>
+                            <kindDefs>
+                                <li>MomuCitizen</li>
+                            </kindDefs>
+                            <chance>10.0</chance>
+                        </li>
+                    </pawnKindEntries>
+                    <factionDefs>
+                        <li>PlayerColony</li> 
+                    </factionDefs>
+                </li>
+            </alienwandererkinds>
+            </pawnKindSettings>
+</AlienRace.RaceSettings>
+</Defs>

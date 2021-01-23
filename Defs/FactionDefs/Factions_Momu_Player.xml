@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <FactionDef Abstract="True" Name="MomuFactionBase">
+    <homeIconPath>World/WorldObjects/DefaultSettlement</homeIconPath>
+	<colorSpectrum>
+      <li>(0, 0.737, 0.847)</li>
+    </colorSpectrum>
+  </FactionDef>
+  
+  <FactionDef Parent="MomuFactionBase">
+    <defName>MomuPlayerColony</defName>
+    <label>Momu Enclave</label>
+    <description>Your own community.</description>
+    <isPlayer>true</isPlayer>
+    <basicMemberKind>Momu</basicMemberKind>
+    <pawnsPlural>colonists</pawnsPlural>
+	<pawnNameMaker>NamerMomuUtility</pawnNameMaker>
+    <factionNameMaker>NamerFactionOutlander</factionNameMaker>
+    <techLevel>Ultra</techLevel>
+    <backstoryCategories><li>Momu</li></backstoryCategories>
+    <homeIconPath>World/MomuBase</homeIconPath>
+    <expandingIconTexture>World/WorldObjects/Expanding/Town</expandingIconTexture>
+	<playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+	<settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+	<geneticVariance>1</geneticVariance>
+    <startingResearchTags>
+      <li>ClassicStart</li>
+    </startingResearchTags>
+    <hairTags>
+      <li>Momu</li>
+    </hairTags>
+    <apparelStuffFilter>
+      <thingDefs>
+        <li>Synthread</li>
+      </thingDefs>
+    </apparelStuffFilter>
+
+  </FactionDef>
+
+</Defs>

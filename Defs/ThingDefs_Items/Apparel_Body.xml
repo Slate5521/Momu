@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<ThingDef ParentName="ApparelMakeableBase">
+		<defName>Apparel_Momu_Poncho</defName>
+		<label>Momu Poncho</label>
+		<description>A long, cloak-like garment to help you keep cool in the desert. Humans can wear it, too, but only if they have the same body type as the Momu!</description>
+		<techLevel>Medieval</techLevel>
+		<recipeMaker>
+			<recipeUsers>
+				<li>ElectricTailoringBench</li>
+				<li>HandTailoringBench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<graphicData>
+			<texPath>Items/Apparel/Poncho/Poncho</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		    <shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<statBases>
+			<WorkToMake>8000</WorkToMake>
+			<Mass>3</Mass>
+			<StuffEffectMultiplierArmor>0.60</StuffEffectMultiplierArmor>
+			<StuffEffectMultiplierInsulation_Cold>0.6</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>0.85</StuffEffectMultiplierInsulation_Heat>
+			<EquipDelay>3</EquipDelay>
+		</statBases>
+		<thingCategories>
+			<li>Apparel</li>
+		</thingCategories>
+		<costStuffCount>80</costStuffCount>
+		<stuffCategories>
+			<li>Leathery</li>
+			<li>Fabric</li>
+		</stuffCategories>
+		<generateCommonality>0.3</generateCommonality>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Items/Apparel/Poncho/Poncho</wornGraphicPath>
+			<layers>
+				<li>Shell</li>
+			</layers>
+			<tags>
+        <li>Momu_Clothes</li>
+      </tags>
+		</apparel>
+		<comps>
+      <li Class="Momu.CompProperties_ApparelBodyRestriction">
+            <AllowedBodyTypes>
+                <li>Male</li>
+				<li>Female</li>
+            </AllowedBodyTypes>
+      </li>
+    </comps>
+</ThingDef>	
+
+
+
+	<ThingDef ParentName="ApparelMakeableBase">
+		<defName>Apparel_Momu_ThickJacket</defName>
+		<label>Momu Thick Jacket</label>
+		<description>This jacket is thicker than the human standard, but doesn't interfere with one's movement like a parka. Humans can wear it, too, but only if they have the same body type as the Momu!</description>
+		<techLevel>Medieval</techLevel>
+		<recipeMaker>
+			<recipeUsers>
+				<li>ElectricTailoringBench</li>
+				<li>HandTailoringBench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<graphicData>
+			<texPath>Items/Apparel/ThickJacket/ThickJacket</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<WorkToMake>8000</WorkToMake>
+			<Mass>3</Mass>
+			<StuffEffectMultiplierArmor>0.73</StuffEffectMultiplierArmor>
+			<StuffEffectMultiplierInsulation_Cold>1.4</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>0.2</StuffEffectMultiplierInsulation_Heat>
+			<EquipDelay>3</EquipDelay>
+		</statBases>
+		<thingCategories>
+			<li>Apparel</li>
+		</thingCategories>
+		<costStuffCount>80</costStuffCount>
+		<stuffCategories>
+			<li>Fabric</li>
+		</stuffCategories>
+		<generateCommonality>0.3</generateCommonality>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Items/Apparel/ThickJacket/ThickJacket</wornGraphicPath>
+			<layers>
+				<li>Shell</li>
+			</layers>
+			<tags>
+        <li>Momu_Clothes</li>
+      </tags>
+		</apparel>
+		  <comps>
+      <li Class="Momu.CompProperties_ApparelBodyRestriction">
+            <AllowedBodyTypes>
+                <li>Male</li>
+				<li>Female</li>
+            </AllowedBodyTypes>
+      </li>
+    </comps>
+</ThingDef>	
+
+	<ThingDef ParentName="ApparelMakeableBase">
+		<defName>Apparel_Momu_SimpleShirt</defName>
+		<label>Momu Simple Shirt</label>
+		<description>A simple shirt, sewn with care. Humans can wear it, too, but only if they have the same body type as the Momu!</description>
+		<techLevel>Medieval</techLevel>
+		<recipeMaker>
+			<recipeUsers>
+				<li>ElectricTailoringBench</li>
+				<li>HandTailoringBench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<graphicData>
+			<texPath>Items/Apparel/SimpleShirt/SimpleShirt</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<WorkToMake>6000</WorkToMake>
+			<Mass>3</Mass>
+			<StuffEffectMultiplierArmor>0.73</StuffEffectMultiplierArmor>
+			<StuffEffectMultiplierInsulation_Cold>0.5</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>0.5</StuffEffectMultiplierInsulation_Heat>
+			<EquipDelay>3</EquipDelay>
+		</statBases>
+		<thingCategories>
+			<li>Apparel</li>
+		</thingCategories>
+		<costStuffCount>40</costStuffCount>
+		<stuffCategories>
+			<li>Fabric</li>
+		</stuffCategories>
+		<generateCommonality>0.3</generateCommonality>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Items/Apparel/SimpleShirt/SimpleShirt</wornGraphicPath>
+			<layers>
+				<li>Middle</li>
+			</layers>
+			<tags>
+        <li>Momu_Clothes</li>
+      </tags>
+		</apparel>
+		  <comps>
+      <li Class="Momu.CompProperties_ApparelBodyRestriction">
+            <AllowedBodyTypes>
+                <li>Male</li>
+				<li>Female</li>
+            </AllowedBodyTypes>
+      </li>
+    </comps>
+</ThingDef>	
+
+
+	<ThingDef ParentName="ApparelMakeableBase">
+		<defName>Apparel_Momu_RoyalCoat</defName>
+		<label>Momu Royal Coat</label>
+		<description>A fancy coat, often worn by important people. Humans can wear it, too, but only if they have the same body type as the Momu!</description>
+		<techLevel>Medieval</techLevel>
+		<recipeMaker>
+			<recipeUsers>
+				<li>ElectricTailoringBench</li>
+				<li>HandTailoringBench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<graphicData>
+			<texPath>Items/Apparel/RoyalCoat/RoyalCoat</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		    <shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<statBases>
+			<WorkToMake>10000</WorkToMake>
+			<Mass>3</Mass>
+			<StuffEffectMultiplierArmor>0.73</StuffEffectMultiplierArmor>
+			<StuffEffectMultiplierInsulation_Cold>0.5</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>0.5</StuffEffectMultiplierInsulation_Heat>
+			<EquipDelay>3</EquipDelay>
+		</statBases>
+		<thingCategories>
+			<li>Apparel</li>
+		</thingCategories>
+		<costStuffCount>80</costStuffCount>
+		<stuffCategories>
+			<li>Fabric</li>
+		</stuffCategories>
+		<generateCommonality>0.3</generateCommonality>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Items/Apparel/RoyalCoat/RoyalCoat</wornGraphicPath>
+			<layers>
+				<li>Shell</li>
+			</layers>
+			<tags>
+        <li>Momu_Clothes</li>
+      </tags>
+		</apparel>
+		 <comps>
+      <li Class="Momu.CompProperties_ApparelBodyRestriction">
+            <AllowedBodyTypes>
+                <li>Male</li>
+				<li>Female</li>
+            </AllowedBodyTypes>
+      </li>
+    </comps>
+</ThingDef>	
+
+
+	<ThingDef ParentName="ApparelMakeableBase">
+		<defName>Apparel_Momu_EventClothes</defName>
+		<label>Momu Event Clothes</label>
+		<description>A fancy set of clothing for a night out on the town. Humans can wear it, too, but only if they have the same body type as the Momu!</description>
+		<techLevel>Medieval</techLevel>
+		<recipeMaker>
+			<recipeUsers>
+				<li>ElectricTailoringBench</li>
+				<li>HandTailoringBench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<graphicData>
+			<texPath>Items/Apparel/EventClothes/EventClothes</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		    <shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<statBases>
+			<WorkToMake>8000</WorkToMake>
+			<Mass>3</Mass>
+			<StuffEffectMultiplierArmor>0.73</StuffEffectMultiplierArmor>
+			<StuffEffectMultiplierInsulation_Cold>0.5</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>0.5</StuffEffectMultiplierInsulation_Heat>
+			<EquipDelay>3</EquipDelay>
+		</statBases>
+		<thingCategories>
+			<li>Apparel</li>
+		</thingCategories>
+		<costStuffCount>80</costStuffCount>
+		<stuffCategories>
+			<li>Fabric</li>
+		</stuffCategories>
+		<generateCommonality>0.3</generateCommonality>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Items/Apparel/EventClothes/EventClothes</wornGraphicPath>
+			<layers>
+				<li>Shell</li>
+			</layers>
+			<tags>
+        <li>Momu_Clothes</li>
+      </tags>
+		</apparel>
+		<comps>
+      <li Class="Momu.CompProperties_ApparelBodyRestriction">
+            <AllowedBodyTypes>
+                <li>Male</li>
+				<li>Female</li>
+            </AllowedBodyTypes>
+      </li>
+    </comps>
+</ThingDef>	
+
+
+</Defs>

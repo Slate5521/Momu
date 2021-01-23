@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" ?>
+  <Defs>
+  <RecipeDef>
+    <defName>Make_Veggie_Meal</defName>
+    <label>make vegetarian medley</label>
+    <description>Artfully prepare some potatoes and corn together for extra satisfaction. A Momu favorite!</description>
+    <jobString>Making vegetarian medley.</jobString>
+    <workAmount>450</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>True</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <ingredients>
+     <li>
+        <filter>
+          <categories>
+            <li>RawTuber</li>
+          </categories>
+          <thingDefs>
+            <li>RawPotatoes</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>RawCorny</li>
+          </categories>
+          <thingDefs>
+            <li>RawCorn</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <products>
+      <MealVegetarian>2</MealVegetarian>
+    </products>
+    <fixedIngredientFilter>
+      <categories>
+		<li>RawTuber</li>
+        <li>RawCorny</li>
+      </categories>
+      <thingDefs>
+        <li>RawCorn</li>
+		<li>RawPotatoes</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+      <categories>
+        <li>Foods</li>
+      </categories>
+    </defaultIngredientFilter>
+    <workSkill>Cooking</workSkill>
+	 <recipeUsers>
+        <li>ElectricStove</li>
+		<li>FueledStove</li>
+      </recipeUsers>
+  </RecipeDef>
+  
+  <RecipeDef>
+    <defName>Make_Lavish_Veggie_Meal</defName>
+    <label>make lavish vegetarian medley</label>
+    <description>Adds a dash of sunflower oil to a vegetarian meal to make it delicious! A Momu Lavish Meal.</description>
+    <jobString>Making lavish medley.</jobString>
+    <workAmount>450</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>True</allowMixingIngredients>
+<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>MealVegetarian</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>SunFlowerOil</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<products>
+			<MealLavishVegetarian>1</MealLavishVegetarian>
+		</products>
+    <workSkill>Cooking</workSkill>
+	 <recipeUsers>
+        <li>ElectricStove</li>
+		<li>FueledStove</li>
+      </recipeUsers>
+	  <skillRequirements>
+			<Cooking>8</Cooking>
+		</skillRequirements>
+  </RecipeDef>
+  
+  </Defs>

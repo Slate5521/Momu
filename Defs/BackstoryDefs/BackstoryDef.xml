@@ -1,0 +1,1067 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<!--##Adulthood:    -->
+<AlienRace.BackstoryDef>
+    <defName>Greenguard_Trapper</defName>
+    <title>Greenguard Trapper</title>
+    <titleShort>Trapper</titleShort>
+    <baseDescription>[PAWN_nameDef] has a good eye for rigging traps and snares. [PAWN_pronoun] is resourceful in a fight. (Momu)
+</baseDescription>
+
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+
+    <slot>Adulthood</slot>
+    <skillGains>
+      <li>
+        <defName>Shooting</defName>
+        <amount>3</amount>
+      </li>
+      <li>
+        <defName>Construction</defName>
+        <amount>5</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>Momu</li>
+	  <li>Greenguard</li>
+    </spawnCategories>
+	</AlienRace.BackstoryDef>
+	
+<AlienRace.BackstoryDef>
+    <defName>Momu_Adventurer</defName>
+    <title>Momu Adventurer</title>
+    <titleShort>Adventurer</titleShort>
+    <baseDescription>[PAWN_nameDef] yearned for adventure, more so than other Momu. However, fate had [PAWN_possessive] spend a large part of [PAWN_possessive] life in poverty wandering from place to place. Now lost and searching for a place to call home and end [PAWN_possessive] adventuring days in peace.
+ (Momu)
+</baseDescription>
+
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+
+    <slot>Adulthood</slot>
+    <skillGains>
+      <li>
+        <defName>Shooting</defName>
+        <amount>3</amount>
+      </li>
+      <li>
+        <defName>Melee</defName>
+        <amount>1</amount>
+      </li>
+	  <li>
+        <defName>Medicine</defName>
+        <amount>2</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>Momu</li>
+    </spawnCategories>
+	</AlienRace.BackstoryDef>
+
+<AlienRace.BackstoryDef>
+    <defName>Momu_Rancher</defName>
+    <title>Momu Rancher</title>
+    <titleShort>Rancher</titleShort>
+    <baseDescription>[PAWN_nameDef] is in charge of gathering wool for making clothing alongside eggs and milk to trade - [PAWN_pronoun] spends a lot of time with animals. In off times, [PAWN_possessive] helps grow hay for the fields.
+ (Momu)
+</baseDescription>
+
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+
+    <slot>Adulthood</slot>
+    <skillGains>
+      <li>
+        <defName>Animals</defName>
+        <amount>5</amount>
+      </li>
+      <li>
+        <defName>Medicine</defName>
+        <amount>2</amount>
+      </li>
+	  <li>
+        <defName>Plants</defName>
+        <amount>2</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>Momu</li>
+    </spawnCategories>
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef>
+    <defName>Momu_Artist</defName>
+    <title>Momu Artist</title>
+    <titleShort>Artist</titleShort>
+    <baseDescription>[PAWN_nameDef] is skilled at turning raw materials into beautiful objects. [PAWN_pronoun] sometimes tends to hoard, but everyone appreciates the beauty they add to the colony. They tend to skimp out on their end of the daily chores.
+ (Momu)
+</baseDescription>
+
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+
+    <slot>Adulthood</slot>
+    <skillGains>
+      <li>
+        <defName>Artistic</defName>
+        <amount>5</amount>
+      </li>
+      <li>
+        <defName>Medicine</defName>
+        <amount>2</amount>
+      </li>
+	  <li>
+        <defName>Plants</defName>
+        <amount>2</amount>
+      </li>
+    </skillGains>
+	<workDisables>
+	<li>ManualDumb</li>
+	</workDisables>
+    <spawnCategories>
+      <li>Momu</li>
+    </spawnCategories>
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef>
+    <defName>Momu_Laborer</defName>
+    <title>Momu Laborer</title>
+    <titleShort>Laborer</titleShort>
+    <baseDescription>[PAWN_nameDef] is quick to land a helping hand around the colony. They aren't the brightest Momu in the colony, but that doesn't make them any less appreciated.
+ (Momu)
+</baseDescription>
+
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+
+    <slot>Adulthood</slot>
+    <skillGains>
+      <li>
+        <defName>Construction</defName>
+        <amount>3</amount>
+      </li>
+      <li>
+        <defName>Melee</defName>
+        <amount>2</amount>
+      </li>
+	  <li>
+        <defName>Mining</defName>
+        <amount>3</amount>
+      </li>
+    </skillGains>
+	<workDisables>
+	<li>Intellectual</li>
+	</workDisables>
+    <spawnCategories>
+      <li>Momu</li>
+    </spawnCategories>
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef>
+    <defName>Momu_Greenguard_Builder</defName>
+    <title>Greenguard Builder</title>
+    <titleShort>Builder</titleShort>
+    <baseDescription>[PAWN_nameDef] is responsible for building defenses, sleeping spots and anything else that the Greenguard needs on the go. [PAWN_pronoun] isn't much of a talker, preferring to focus on their work.
+ (Momu)
+</baseDescription>
+
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+
+    <slot>Adulthood</slot>
+    <skillGains>
+      <li>
+        <defName>Construction</defName>
+        <amount>4</amount>
+      </li>
+      <li>
+        <defName>Melee</defName>
+        <amount>2</amount>
+      </li>
+	  <li>
+        <defName>Crafting</defName>
+        <amount>2</amount>
+      </li>
+	  <li>
+        <defName>Social</defName>
+        <amount>-3</amount>
+      </li>
+    </skillGains>
+	<workDisables>
+	<li>Caring</li>
+	</workDisables>
+    <spawnCategories>
+      <li>Momu</li>
+	  <li>Greenguard</li>
+    </spawnCategories>
+	</AlienRace.BackstoryDef>
+	
+		<AlienRace.BackstoryDef>
+    <defName>Momu_Foreign_Chef</defName>
+    <title>Momu Chef</title>
+    <titleShort>Chef</titleShort>
+    <baseDescription>Though Momu tend to eat raw food, [PAWN_nameDef] has learned to artfully arrange raw ingredients, and cook for human guests as well as make kibble for animals. Others view her fascination with cooking oddly, but [PAWN_pronoun] doesn't mind. [PAWN_nameDef] prefers to be in the kitchen than anywhere else.
+ (Momu)
+</baseDescription>
+
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+
+    <slot>Adulthood</slot>
+    <skillGains>
+      <li>
+        <defName>Cooking</defName>
+        <amount>5</amount>
+      </li>
+      <li>
+        <defName>Animals</defName>
+        <amount>2</amount>
+      </li>
+	  <li>
+        <defName>Plants</defName>
+        <amount>2</amount>
+      </li>
+	   <li>
+        <defName>Construction</defName>
+        <amount>-2</amount>
+      </li>
+	   <li>
+        <defName>Mining</defName>
+        <amount>-4</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>Momu</li>
+    </spawnCategories>
+	</AlienRace.BackstoryDef>
+	
+	
+		<AlienRace.BackstoryDef>
+    <defName>Momu_Crafter</defName>
+    <title>Craftsrabbit</title>
+    <titleShort>Craftsrabbit</titleShort>
+    <baseDescription>[PAWN_nameDef] has a very important role - creating goods for the colony. [PAWN_pronoun] is very talented, and tries to teach [PAWN_possessive] kin their craft. After a fire in a tailor shop, [PAWN_pronoun] is terrified of flames.
+ (Momu)
+</baseDescription>
+
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+
+    <slot>Adulthood</slot>
+    <skillGains>
+      <li>
+        <defName>Crafting</defName>
+        <amount>5</amount>
+      </li>
+      <li>
+        <defName>Construction</defName>
+        <amount>2</amount>
+      </li>
+	  <li>
+        <defName>Plants</defName>
+        <amount>-4</amount>
+      </li>
+	   <li>
+        <defName>Medicine</defName>
+        <amount>-3</amount>
+      </li>
+	   <li>
+        <defName>Social</defName>
+        <amount>2</amount>
+      </li>
+    </skillGains>
+	<workDisables>
+			<li>Firefighting</li>
+	</workDisables>
+    <spawnCategories>
+      <li>Momu</li>
+    </spawnCategories>
+	</AlienRace.BackstoryDef>
+	
+			<AlienRace.BackstoryDef>
+    <defName>Momu_Greenguard_Smith</defName>
+    <title>Greenguard Smith</title>
+    <titleShort>Smith</titleShort>
+    <baseDescription>[PAWN_nameDef] spends hours at the forge or the carpentry bench, churning out weapons and armor to keep [PAWN_possessive] friends safe.
+ (Momu)
+</baseDescription>
+
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+
+    <slot>Adulthood</slot>
+    <skillGains>
+      <li>
+        <defName>Crafting</defName>
+        <amount>5</amount>
+      </li>
+      <li>
+        <defName>Construction</defName>
+        <amount>2</amount>
+      </li>
+	  <li>
+        <defName>Plants</defName>
+        <amount>-4</amount>
+      </li>
+	   <li>
+        <defName>Melee</defName>
+        <amount>2</amount>
+      </li>
+	   <li>
+        <defName>Social</defName>
+        <amount>-2</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>Momu</li>
+	  <li>Greenguard</li>
+    </spawnCategories>
+	</AlienRace.BackstoryDef>
+	
+				<AlienRace.BackstoryDef>
+    <defName>Momu_Greenguard_Healer</defName>
+    <title>Greenguard Healer</title>
+    <titleShort>Medic</titleShort>
+    <baseDescription>[PAWN_nameDef] is in charge of patching wounds and making sure that [PAWN_possessive] friends are healthy and safe. [PAWN_nameDef] picked up some cooking knowledge from a human caravan.
+ (Momu)
+</baseDescription>
+
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+
+    <slot>Adulthood</slot>
+    <skillGains>
+      <li>
+        <defName>Medicine</defName>
+        <amount>5</amount>
+      </li>
+      <li>
+        <defName>Animals</defName>
+        <amount>2</amount>
+      </li>
+	  <li>
+        <defName>Artistic</defName>
+        <amount>-4</amount>
+      </li>
+	   <li>
+        <defName>Cooking</defName>
+        <amount>2</amount>
+      </li>
+	   <li>
+        <defName>Mining</defName>
+        <amount>-2</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>Momu</li>
+	  <li>Greenguard</li>
+    </spawnCategories>
+	</AlienRace.BackstoryDef>
+	
+					<AlienRace.BackstoryDef>
+    <defName>Momu_Village_Healer</defName>
+    <title>Village Healer</title>
+    <titleShort>Healer</titleShort>
+    <baseDescription>[PAWN_nameDef] crafts medicine and tends to wounded Momu. [PAWN_nameDef] has taken a vow of nonviolence after seeing what others are capable of.
+ (Momu)
+</baseDescription>
+
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+
+    <slot>Adulthood</slot>
+    <skillGains>
+      <li>
+        <defName>Medicine</defName>
+        <amount>5</amount>
+      </li>
+      <li>
+        <defName>Animals</defName>
+        <amount>3</amount>
+      </li>
+    </skillGains>
+	<workDisables>
+			<li>Violent</li>
+	</workDisables>
+    <spawnCategories>
+      <li>Momu</li>
+    </spawnCategories>
+	</AlienRace.BackstoryDef>
+	
+					<AlienRace.BackstoryDef>
+    <defName>Momu_Greenguard_Knight</defName>
+    <title>Greenguard Knight</title>
+    <titleShort>Knight</titleShort>
+    <baseDescription>A peerless warrior, [PAWN_nameDef] has tirelessly trained to keep [PAWN_possessive] friends safe. [PAWN_nameDef] has left behind intellectual skills to focus on combat.
+ (Momu)
+</baseDescription>
+
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+
+    <slot>Adulthood</slot>
+    <skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>6</amount>
+      </li>
+      <li>
+        <defName>Shooting</defName>
+        <amount>5</amount>
+      </li>
+	  <li>
+        <defName>Artistic</defName>
+        <amount>-4</amount>
+      </li>
+	   <li>
+        <defName>Plants</defName>
+        <amount>-2</amount>
+      </li>
+    </skillGains>
+	<workDisables>
+	<li>Intellectual</li>
+	</workDisables>
+    <spawnCategories>
+      <li>Momu</li>
+	  <li>Greenguard</li>
+    </spawnCategories>
+	</AlienRace.BackstoryDef>
+
+<AlienRace.BackstoryDef>
+    <defName>Momu_Geologist</defName>
+    <title>Momu Geologist</title>
+    <titleShort>Geologist</titleShort>
+    <baseDescription>[PAWN_nameDef] loves collecting metal, jewels and useful stones.[PAWN_pronoun] doesn't even mind going into dark spaces to find them. [PAWN_nameDef] enjoys hard work. Animals seem to dislike [PAWN_possessive] for some reason.
+ (Momu)
+</baseDescription>
+
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+
+    <slot>Adulthood</slot>
+    <skillGains>
+      <li>
+        <defName>Mining</defName>
+        <amount>4</amount>
+      </li>
+      <li>
+        <defName>Melee</defName>
+        <amount>2</amount>
+      </li>
+	  <li>
+        <defName>Artistic</defName>
+        <amount>2</amount>
+      </li>
+	   <li>
+        <defName>Plants</defName>
+        <amount>-4</amount>
+      </li>
+    </skillGains>
+	<workDisables>
+	<li>Animals</li>
+	</workDisables>
+    <spawnCategories>
+      <li>Momu</li>
+    </spawnCategories>
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef>
+    <defName>Momu_Seer</defName>
+    <title>Momu Seer</title>
+    <titleShort>Seer</titleShort>
+    <baseDescription>[PAWN_nameDef] is the wisest of all the Wiserabbits, and [PAWN_pronoun] tends to act as the colony's leader.
+ (Momu)
+</baseDescription>
+
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+
+    <slot>Adulthood</slot>
+    <skillGains>
+      <li>
+        <defName>Intellectual</defName>
+        <amount>6</amount>
+      </li>
+      <li>
+        <defName>Social</defName>
+        <amount>2</amount>
+      </li>
+	  <li>
+        <defName>Artistic</defName>
+        <amount>2</amount>
+      </li>
+	   <li>
+        <defName>Mining</defName>
+        <amount>-4</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>Momu</li>
+    </spawnCategories>
+	</AlienRace.BackstoryDef>
+	
+		<AlienRace.BackstoryDef>
+    <defName>Momu_Wiserabbit</defName>
+    <title>Momu Wiserabbit</title>
+    <titleShort>Wiserabbit</titleShort>
+    <baseDescription>[PAWN_nameDef] is a Wiserabbit, and [PAWN_pronoun] loves to learn new things. Unfortunately, [PAWN_pronoun] is allergic to pollen, and prefers to spend time inside.
+ (Momu)
+</baseDescription>
+
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+
+    <slot>Adulthood</slot>
+    <skillGains>
+      <li>
+        <defName>Intellectual</defName>
+        <amount>5</amount>
+      </li>
+      <li>
+        <defName>Social</defName>
+        <amount>1</amount>
+      </li>
+	  <li>
+        <defName>Medicine</defName>
+        <amount>2</amount>
+      </li>
+	   <li>
+        <defName>Mining</defName>
+        <amount>-4</amount>
+      </li>
+    </skillGains>
+	<workDisables>
+	<li>PlantWork</li>
+	</workDisables>
+    <spawnCategories>
+      <li>Momu</li>
+    </spawnCategories>
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef>
+    <defName>Momu_Grower</defName>
+    <title>Momu Grower</title>
+    <titleShort>Grower</titleShort>
+    <baseDescription>[PAWN_nameDef] has a very important job - growing food for everyone to eat. [PAWN_pronoun] has a green thumb, and tends to make a lot of friends. After all, people love to eat!
+ (Momu)
+</baseDescription>
+
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+
+    <slot>Adulthood</slot>
+    <skillGains>
+      <li>
+        <defName>Plants</defName>
+        <amount>5</amount>
+      </li>
+      <li>
+        <defName>Social</defName>
+        <amount>1</amount>
+      </li>
+	  <li>
+        <defName>Animals</defName>
+        <amount>2</amount>
+      </li>
+    </skillGains>
+	<workDisables>
+	<li>Mining</li>
+	</workDisables>
+    <spawnCategories>
+      <li>Momu</li>
+    </spawnCategories>
+	</AlienRace.BackstoryDef>
+	
+		<AlienRace.BackstoryDef>
+    <defName>Momu_Fletcher</defName>
+    <title>Momu Fletcher</title>
+    <titleShort>Fletcher</titleShort>
+    <baseDescription>[PAWN_nameDef] makes bows and arrows for their colony and the Greenguard. [PAWN_pronoun] has a good eye for detail, and has kept birds in the past for feathers.
+ (Momu)
+</baseDescription>
+
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+
+    <slot>Adulthood</slot>
+    <skillGains>
+      <li>
+        <defName>Crafting</defName>
+        <amount>5</amount>
+      </li>
+      <li>
+        <defName>Shooting</defName>
+        <amount>3</amount>
+      </li>
+	  <li>
+        <defName>Animals</defName>
+        <amount>2</amount>
+      </li>
+	  
+    </skillGains>
+    <spawnCategories>
+      <li>Momu</li>
+	  <li>Greenguard</li>
+    </spawnCategories>
+	</AlienRace.BackstoryDef>
+	
+			<AlienRace.BackstoryDef>
+    <defName>Momu_Greenguard_Ranger</defName>
+    <title>Momu Ranger</title>
+    <titleShort>Ranger</titleShort>
+    <baseDescription>[PAWN_nameDef] is a great shot with a bow. [PAWN_pronoun] supports her friends at a safe distance. [PAWN_pronoun] has also learned a little bit of first aid, since [PAWN_pronoun] lets the knights take the hits.
+ (Momu)
+</baseDescription>
+
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+
+    <slot>Adulthood</slot>
+    <skillGains>
+      <li>
+        <defName>Shooting</defName>
+        <amount>5</amount>
+      </li>
+      <li>
+        <defName>Medicine</defName>
+        <amount>2</amount>
+      </li>
+	  <li>
+        <defName>Social</defName>
+        <amount>2</amount>
+      </li>
+	  
+    </skillGains>
+    <spawnCategories>
+      <li>Momu</li>
+	  <li>Greenguard</li>
+    </spawnCategories>
+	</AlienRace.BackstoryDef>
+	
+				<AlienRace.BackstoryDef>
+    <defName>Momu_Entertainer</defName>
+    <title>Momu Entertainer</title>
+    <titleShort>Entertainer</titleShort>
+    <baseDescription>[PAWN_nameDef] is an entertainer, and takes great joy in making others smile. [PAWN_pronoun] is often used as a negotiator with other races due to their charisma. [PAWN_pronoun] doesn't have much of a stomach for violence.
+ (Momu)
+</baseDescription>
+
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+
+    <slot>Adulthood</slot>
+    <skillGains>
+      <li>
+        <defName>Social</defName>
+        <amount>6</amount>
+      </li>
+      <li>
+        <defName>Artistic</defName>
+        <amount>3</amount>
+      </li>
+    </skillGains>
+	<workDisables>
+	<li>Violent</li>
+	</workDisables>
+    <spawnCategories>
+      <li>Momu</li>
+    </spawnCategories>
+	</AlienRace.BackstoryDef>
+	
+	
+	
+	
+	
+<!--##Childhood:    -->
+<AlienRace.BackstoryDef>
+    <defName>Momu_Naieve_Child</defName>
+    <title>Kind Child</title>
+    <titleShort>Kind</titleShort>
+    <baseDescription>[PAWN_nameDef] grew up in a huge family. There really was no need to worry about their livelyhood as there was nothing to fear growing up. This made [PAWN_possessive] rather naïve. Thinking that there is good in everyone surely brought trouble for them, but they have a firm belief that everyone has goodness inside of them.
+(Momu)
+</baseDescription>
+
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+
+    <slot>Childhood</slot>
+    <skillGains>
+      <li>
+        <defName>Social</defName>
+        <amount>5</amount>
+      </li>
+      <li>
+        <defName>Plants</defName>
+        <amount>4</amount>
+      </li>
+    </skillGains>
+	<workDisables>
+			<li>Violent</li>
+	</workDisables>
+    <spawnCategories>
+      <li>Momu</li>
+    </spawnCategories>
+</AlienRace.BackstoryDef>
+
+<AlienRace.BackstoryDef>	
+	<defName>Momu_Responsible_Child</defName>
+    <title>Responsible Child</title>
+    <titleShort>Responsible</titleShort>
+    <baseDescription>In [PAWN_possessive] litter, [PAWN_nameDef] was always the responsible one. [PAWN_possessive] parents would always praise [PAWN_possessive] for being so helpful and the other Momu would always give [PAWN_pronoun] compliments. [PAWN_nameDef]thus always aims to please and has a hard time saying no. 
+(Momu)
+</baseDescription>
+
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+
+    <slot>Childhood</slot>
+    <skillGains>
+      <li>
+        <defName>Cooking</defName>
+        <amount>2</amount>
+      </li>
+      <li>
+        <defName>Social</defName>
+        <amount>3</amount>
+      </li>
+	  <li>
+        <defName>Animals</defName>
+        <amount>2</amount>
+      </li>
+	  <li>
+        <defName>Medicine</defName>
+        <amount>2</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>Momu</li>
+    </spawnCategories>
+</AlienRace.BackstoryDef>
+
+<AlienRace.BackstoryDef>	
+	<defName>Momu_Bully_Child</defName>
+    <title>Bully</title>
+    <titleShort>Bully</titleShort>
+    <baseDescription>[PAWN_nameDef] is a bully - always getting into trouble and causing a ruckus. Some have taken to call [PAWN_possessive] the 'black rabbit' due to this. However, get on [PAWN_possessive] good side, and you have a friend for life. 
+(Momu)
+</baseDescription>
+
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+
+    <slot>Childhood</slot>
+    <skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>3</amount>
+      </li>
+      <li>
+        <defName>Mining</defName>
+        <amount>2</amount>
+      </li>
+	  <li>
+        <defName>Shooting</defName>
+        <amount>1</amount>
+      </li>
+    </skillGains>
+	<workDisables>
+			<li>Caring</li>
+	</workDisables>
+    <spawnCategories>
+      <li>Momu</li>
+    </spawnCategories>
+</AlienRace.BackstoryDef>
+
+<AlienRace.BackstoryDef>	
+	<defName>Momu_Bookworm_Child</defName>
+    <title>Momu Bookworm</title>
+    <titleShort>Bookworm</titleShort>
+    <baseDescription>[PAWN_nameDef] loves to read and spend time by themselves. [PAWN_nameDef] simply wants to find some time alone to do things that matter to [PAWN_possessive]. 
+(Momu)
+</baseDescription>
+
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+
+    <slot>Childhood</slot>
+    <skillGains>
+      <li>
+        <defName>Intellectual</defName>
+        <amount>4</amount>
+      </li>
+      <li>
+        <defName>Artistic</defName>
+        <amount>2</amount>
+      </li>
+	   <li>
+        <defName>Crafting</defName>
+        <amount>2</amount>
+      </li>
+	  
+    </skillGains>
+	<workDisables>
+			<li>Social</li>
+	</workDisables>
+    <spawnCategories>
+      <li>Momu</li>
+    </spawnCategories>
+</AlienRace.BackstoryDef>
+
+<AlienRace.BackstoryDef>	
+	<defName>Momu_Petshop_Child</defName>
+    <title>Momu Petshop Assistant</title>
+    <titleShort>Assistant</titleShort>
+    <baseDescription>[PAWN_nameDef] works part time at a pet shop. [PAWN_nameDef] loves the company of animals.
+(Momu)
+</baseDescription>
+
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+
+    <slot>Childhood</slot>
+    <skillGains>
+      <li>
+        <defName>Animals</defName>
+        <amount>4</amount>
+      </li>
+      <li>
+        <defName>Medicine</defName>
+        <amount>2</amount>
+      </li>
+	   <li>
+        <defName>Social</defName>
+        <amount>1</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>Momu</li>
+    </spawnCategories>
+</AlienRace.BackstoryDef>
+
+<AlienRace.BackstoryDef>	
+	<defName>Momu_Novelist_Child</defName>
+    <title>Momu Aspiring Novelist</title>
+    <titleShort>Writer</titleShort>
+    <baseDescription>[PAWN_nameDef] loves to write stories and show them with [PAWN_possessive] friends.
+(Momu)
+</baseDescription>
+
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+
+    <slot>Childhood</slot>
+    <skillGains>
+      <li>
+        <defName>Artistic</defName>
+        <amount>4</amount>
+      </li>
+      <li>
+        <defName>Social</defName>
+        <amount>3</amount>
+      </li>
+	   <li>
+        <defName>Intellectual</defName>
+        <amount>1</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>Momu</li>
+    </spawnCategories>
+</AlienRace.BackstoryDef>
+
+<AlienRace.BackstoryDef>	
+	<defName>Momu_Errand_Child</defName>
+    <title>Momu Errand Runner</title>
+    <titleShort>Runner</titleShort>
+    <baseDescription>[PAWN_nameDef] doesn't mind helping out anyone that needs it. They're swift on their feet!
+(Momu)
+</baseDescription>
+
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+
+    <slot>Childhood</slot>
+    <skillGains>
+      <li>
+        <defName>Construction</defName>
+        <amount>2</amount>
+      </li>
+      <li>
+        <defName>Mining</defName>
+        <amount>2</amount>
+      </li>
+	   <li>
+        <defName>Plants</defName>
+        <amount>1</amount>
+      </li>
+	  <li>
+        <defName>Cooking</defName>
+        <amount>1</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>Momu</li>
+    </spawnCategories>
+</AlienRace.BackstoryDef>
+
+<AlienRace.BackstoryDef>	
+	<defName>Momu_Survivor_Child</defName>
+    <title>Momu Survivor</title>
+    <titleShort>Survivor</titleShort>
+    <baseDescription>[PAWN_nameDef] was abandoned, and had to live on their own. [PAWN_nameDef] doesn't have very many social skills, but knows a lot about staying alive.
+(Momu)
+</baseDescription>
+
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+
+    <slot>Childhood</slot>
+    <skillGains>
+      <li>
+        <defName>Medicine</defName>
+        <amount>4</amount>
+      </li>
+      <li>
+        <defName>Cooking</defName>
+        <amount>3</amount>
+      </li>
+	   <li>
+        <defName>Construction</defName>
+        <amount>2</amount>
+      </li>
+	  	   <li>
+        <defName>Social</defName>
+        <amount>-4</amount>
+      </li>  
+    </skillGains>
+    <spawnCategories>
+      <li>Momu</li>
+    </spawnCategories>
+</AlienRace.BackstoryDef>
+
+<AlienRace.BackstoryDef>	
+	<defName>Momu_Rescued_Child</defName>
+    <title>Momu Rescued Child</title>
+    <titleShort>Rescue</titleShort>
+    <baseDescription>[PAWN_nameDef] was abandoned when they were very small, but found by a Greenguard party. [PAWN_nameDef] is trying to grow up to be like them - brave and awesome.
+(Momu)
+</baseDescription>
+
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+
+    <slot>Childhood</slot>
+    <skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>4</amount>
+      </li>
+      <li>
+        <defName>Shooting</defName>
+        <amount>3</amount>
+      </li>
+	   <li>
+        <defName>Medicine</defName>
+        <amount>2</amount>
+      </li>
+	  	   <li>
+        <defName>Intellectual</defName>
+        <amount>-2</amount>
+      </li>  
+    </skillGains>
+    <spawnCategories>
+      <li>Momu</li>
+    </spawnCategories>
+</AlienRace.BackstoryDef>
+
+<AlienRace.BackstoryDef>	
+	<defName>Momu_Collector_Child</defName>
+    <title>Momu Rock Collector</title>
+    <titleShort>Collector</titleShort>
+    <baseDescription>[PAWN_nameDef] loves to gather shiny or useful things, and tends to hoard them. They are a bit afraid of animals, after being chased by a mean dog.
+(Momu)
+</baseDescription>
+
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+
+    <slot>Childhood</slot>
+    <skillGains>
+      <li>
+        <defName>Mining</defName>
+        <amount>4</amount>
+      </li>
+      <li>
+        <defName>Artistic</defName>
+        <amount>3</amount>
+      </li>
+	   <li>
+        <defName>Crafting</defName>
+        <amount>2</amount>
+      </li>
+    </skillGains>
+	<workDisables>
+	<li>Animals</li>
+	</workDisables>
+    <spawnCategories>
+      <li>Momu</li>
+    </spawnCategories>
+</AlienRace.BackstoryDef>
+
+<AlienRace.BackstoryDef>	
+	<defName>Momu_Farmhand_Child</defName>
+    <title>Momu Farmhand</title>
+    <titleShort>Farmhand</titleShort>
+    <baseDescription>[PAWN_nameDef] was born to a large farming family, like most Momu. [PAWN_pronoun] tries to help on the farm as well as [PAWN_pronoun] is able.
+(Momu)
+</baseDescription>
+
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+
+    <slot>Childhood</slot>
+    <skillGains>
+      <li>
+        <defName>Plants</defName>
+        <amount>4</amount>
+      </li>
+      <li>
+        <defName>Animals</defName>
+        <amount>3</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>Momu</li>
+    </spawnCategories>
+</AlienRace.BackstoryDef>
+
+<AlienRace.BackstoryDef>	
+	<defName>Momu_Bright_Child</defName>
+    <title>Momu Bright Child</title>
+    <titleShort>Bright</titleShort>
+    <baseDescription>[PAWN_nameDef] is a natural story teller and entertainer. [PAWN_pronoun] loves to make people laugh.
+(Momu)
+</baseDescription>
+
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+
+    <slot>Childhood</slot>
+    <skillGains>
+      <li>
+        <defName>Social</defName>
+        <amount>4</amount>
+      </li>
+      <li>
+        <defName>Intellectual</defName>
+        <amount>2</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>Momu</li>
+    </spawnCategories>
+</AlienRace.BackstoryDef>
+
+
+</Defs>

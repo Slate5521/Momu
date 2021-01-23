@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnKindDef Abstract="True" Name="BaseMomuPawnKind">
+    <race>Alien_Momu</race>
+    <combatPower>40</combatPower>
+    <baseRecruitDifficulty>0.70</baseRecruitDifficulty>
+    <isFighter>false</isFighter>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <forceNormalGearQuality>true</forceNormalGearQuality>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="BaseMomuPawnKind">
+    <defName>Momu</defName>
+    <label>villager</label>
+    <defaultFactionType>PlayerColony</defaultFactionType>
+    <backstoryCategories>
+		<li>Momu</li>
+		<li>Greenguard</li>
+	</backstoryCategories>
+    <apparelTags>
+      <li>Medieval</li>
+	  <li>Momu_Clothes</li>
+    </apparelTags>
+	<apparelRequired>
+      <li>Apparel_Pants</li>
+	</apparelRequired>
+    <apparelMoney>
+      <min>1000</min>
+      <max>2400</max>
+    </apparelMoney>
+    <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+  </PawnKindDef>
+
+</Defs>

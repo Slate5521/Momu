@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<RecipeDef>
+		<defName>Make_SunFlowerOil</defName>
+		<label>make sunflower oil</label>
+		<description>Squeeze a batch of oil out of some sunflower seeds.</description>
+		<jobString>Making sunflower oil</jobString>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<workAmount>800</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>SunFlowerSeeds</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>SunFlowerSeeds</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<SunFlowerOil>1</SunFlowerOil>
+		</products>
+		<recipeUsers>
+	<li>ElectricStove</li>
+	<li>FueledStove</li>
+	</recipeUsers>
+	</RecipeDef>
+</Defs>

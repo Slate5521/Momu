@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<ThingCategoryDef>
+        <defName>RawTuber</defName>
+        <label>vegetarian</label>
+        <parent>PlantFoodRaw</parent>
+      </ThingCategoryDef>
+
+   <ThingCategoryDef>
+        <defName>RawCorny</defName>
+        <label>vegetarian</label>
+        <parent>PlantFoodRaw</parent>
+      </ThingCategoryDef>
+	  
+	<ThingCategoryDef>
+      <defName>MomuRanged</defName>
+      <label>ranged momu weapons</label>
+      <parent>Weapons</parent>
+    </ThingCategoryDef>
+	
+		<ThingCategoryDef>
+      <defName>MomuMelee</defName>
+      <label>Melee momu weapons</label>
+      <parent>Weapons</parent>
+    </ThingCategoryDef>
+	
+</Defs>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+ <Defs>
+ <ThingDef ParentName="BuildingNaturalBase">
+    <defName>LaiNestingBox</defName>
+    <label>nesting box</label>
+    <description>A hive of giant insects. If activated, it will spawn additional insects and hives over time, as well as valuable insect jelly.</description>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Natural/Hive</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.6</drawSize>
+    </graphicData>
+    <uiIconScale>0.65</uiIconScale>
+    <altitudeLayer>Building</altitudeLayer>
+    <rotatable>false</rotatable>
+    <fillPercent>0.5</fillPercent>
+    <statBases>
+      <MaxHitPoints>130</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <pathCost>50</pathCost>
+    <receivesSignals>false</receivesSignals>
+    <blockWind>false</blockWind>
+    <tickerType>Normal</tickerType>
+    <passability>PassThroughOnly</passability>
+	<comps>
+<li Class="CompProperties_Spawner">
+        <thingToSpawn>LaiLarva</thingToSpawn>
+        <spawnCount>2</spawnCount>
+        <spawnIntervalRange>30000~60000</spawnIntervalRange>
+        <spawnMaxAdjacent>2</spawnMaxAdjacent>
+        <saveKeysPrefix>larva</saveKeysPrefix>
+        <inheritFaction>true</inheritFaction>
+		<fuelUsedPerSpawn>100</fuelUsedPerSpawn>
+      </li>
+ <li Class="CompProperties_Refuelable">
+        <fuelLabel>Raw meat inside larva chamber</fuelLabel>
+        <fuelGizmoLabel>Raw Meat</fuelGizmoLabel>
+        <outOfFuelMessage>Cannot spawn Lai Larva: Needs more raw meat</outOfFuelMessage>
+        <fuelFilter><categories><li>MeatRaw</li></categories></fuelFilter>
+        <fuelCapacity>200</fuelCapacity>       <!-- 30 bursts -->
+        <fuelMultiplier>1</fuelMultiplier> <!-- 1.333 steel per burst, 80 per full rearm -->
+        <initialFuelPercent>0</initialFuelPercent>
+        <autoRefuelPercent>0.0</autoRefuelPercent>
+        <showFuelGizmo>true</showFuelGizmo>
+        <minimumFueledThreshold>1</minimumFueledThreshold>
+        <factorByDifficulty>true</factorByDifficulty>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <fuelIconPath>UI/Overlays/Barrel</fuelIconPath>
+      </li>
+	  
+	</comps>
+ </ThingDef>
+ </Defs>
