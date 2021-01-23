@@ -19,6 +19,9 @@ namespace Momu
     [StaticConstructorOnStartup]
     public static class HarmonyPatches
     {
+        ///
+        /// Harmony Patch Documentation
+        /// 
         /// <patch original cref="FoodUtility.AddFoodPoisoningHediff(Pawn, Thing, FoodPoisonCause)"
         ///        prefix   cref="FoodUtility__AddFoodPoisoningHediffPrefix">
         ///        Patch for preventing food poison in Momu who are eating raw vegetarian food. 
@@ -32,7 +35,7 @@ namespace Momu
         ///        Originally created by Ogliss.
         ///        </patch>
         /// <patch original cref="Pawn_NeedsTracker.ShouldHaveNeed(NeedDef)"
-        ///        postfix  cref="Pawn_NeedsTracker__ShouldHaveNeed">
+        ///        postfix  cref="Pawn_NeedsTracker__ShouldHaveNeedPostfix">
         ///        Patch to delete the original vanilla Outdoors need and insert our own <see cref="Momu_Need_Outdoors"/> need.
         ///        
         ///        - IAmMiko
@@ -43,26 +46,29 @@ namespace Momu
             Harmony harmony = new Harmony("rimworld.iammiko.momu.harmony");
             Type harmonyPatch = typeof(HarmonyPatches);
 
-            harmony.Patch(
+            /// <a cref="FoodUtility__AddFoodPoisoningHediffPrefix"/>
+            harmony.Patch( 
                 original: AccessTools.Method(
                     type: typeof(FoodUtility), 
                     name: nameof(FoodUtility.AddFoodPoisoningHediff)), 
                 prefix: new HarmonyMethod(harmonyPatch, nameof(FoodUtility__AddFoodPoisoningHediffPrefix)));
-            
-            harmony.Patch(
+
+            /// <a cref="ApparelUtility__HasPartsToWearPostfix"/>
+            harmony.Patch( 
                 original: AccessTools.Method(
                     type: typeof(ApparelUtility), 
                     name: nameof(ApparelUtility.HasPartsToWear)),
                 postfix: new HarmonyMethod(harmonyPatch, nameof(ApparelUtility__HasPartsToWearPostfix)));
 
-            harmony.Patch(
+            /// <a cref="Pawn_NeedsTracker__ShouldHaveNeedPostfix"/>
+            harmony.Patch( 
                 original: AccessTools.Method(
                     type: typeof(Pawn_NeedsTracker),
                     name: @"ShouldHaveNeed"),
-                postfix: new HarmonyMethod(harmonyPatch, nameof(Pawn_NeedsTracker__ShouldHaveNeed), null));
+                postfix: new HarmonyMethod(harmonyPatch, nameof(Pawn_NeedsTracker__ShouldHaveNeedPostfix), null));
         }
 
-        public static void Pawn_NeedsTracker__ShouldHaveNeed
+        public static void Pawn_NeedsTracker__ShouldHaveNeedPostfix
         (Pawn_NeedsTracker __instance, NeedDef nd, ref bool __result)
         {
             // Get the pawn through Reflection

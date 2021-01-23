@@ -72,6 +72,11 @@
         <description>How long have I been underground? I need to get out in the fresh air and spend some time under the sky.</description>
         <baseMoodEffect>-7</baseMoodEffect>
       </li>
+      <li>
+        <label>light trapped underground</label>
+        <description>[change me]</description>
+        <baseMoodEffect>-5</baseMoodEffect>
+      </li>
     </stages>
   </ThoughtDef>
 
