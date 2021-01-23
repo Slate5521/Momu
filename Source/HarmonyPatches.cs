@@ -12,8 +12,10 @@ namespace Momu
     using System;
     using System.Linq;
     using System.Reflection;
+    using System.Text;
     using HarmonyLib;
     using RimWorld;
+    using UnityEngine;
     using Verse;
 
     [StaticConstructorOnStartup]
@@ -30,12 +32,6 @@ namespace Momu
         ///        Patch for making Momu clothes specific to particular body types (I think).
         ///        
         ///        Originally created by Ogliss.
-        ///        </patch>
-        /// <patch original cref="FoodUtility.WillEat(Pawn, Thing, Pawn, bool)"
-        ///        postfix  cref="FoodUtility__WillEatPostfix">
-        ///        Patch to make it so Momu only eat particular food, in this case, any food that doesn't have meat or animal products in it.
-        ///        
-        ///        Originally created by Ogliss and modified by IAmMiko.
         ///        </patch>
         /// <patch original cref="Pawn_NeedsTracker.ShouldHaveNeed(NeedDef)"
         ///        postfix  cref="Pawn_NeedsTracker__ShouldHaveNeed">
@@ -60,13 +56,6 @@ namespace Momu
                     type: typeof(ApparelUtility), 
                     name: nameof(ApparelUtility.HasPartsToWear)),
                 postfix: new HarmonyMethod(harmonyPatch, nameof(ApparelUtility__HasPartsToWearPostfix)));
-
-            harmony.Patch(
-                original: AccessTools.Method(
-                    type: typeof(FoodUtility), 
-                    name: nameof(FoodUtility.WillEat), 
-                    parameters: new Type[] { typeof(Pawn), typeof(Thing), typeof(Pawn), typeof(bool) }), 
-                postfix: new HarmonyMethod(harmonyPatch, nameof(FoodUtility__WillEatPostfix)));
 
             harmony.Patch(
                 original: AccessTools.Method(
@@ -95,39 +84,6 @@ namespace Momu
             }
         }
 
-        public static void FoodUtility__WillEatPostfix
-        (Pawn p, Thing food, Pawn getter, ref bool __result)
-        {
-            if  // ... 
-            #region if-statement
-                // Ensure values aren't null
-                (p != null && 
-                getter != null && 
-                food != null && 
-                
-                // Make sure this is a Momu
-                p.def == MomuDefOf.Alien_Momu)
-            #endregion if-statement
-            {
-                if (food.def == ThingDefOf.MealSimple)
-                {
-                    CompIngredients compIngredients = ThingCompUtility.TryGetComp<CompIngredients>(food);
-
-                    if (compIngredients != null)
-                    {
-                        __result = 
-                            compIngredients.ingredients
-                                .All((ThingDef ingredient) => 
-                                
-                                ingredient.ingestible.foodType == FoodTypeFlags.VegetableOrFruit || 
-                                ingredient.ingestible.foodType == FoodTypeFlags.VegetarianAnimal || 
-                                ingredient.ingestible.foodType == FoodTypeFlags.VegetarianRoughAnimal || 
-                                ingredient.ingestible.foodType == FoodTypeFlags.Seed || 
-                                ingredient.ingestible.foodType == FoodTypeFlags.Plant);
-                    } // end if
-                } // end if
-            } // end if
-        } // end method
 
         public static void ApparelUtility__HasPartsToWearPostfix
         (Pawn p, ThingDef apparel, ref bool __result)
