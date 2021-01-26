@@ -42,10 +42,8 @@
     <Compile Include="Components\CompProperties_ApparelBodyRestriction.cs" />
     <Compile Include="HarmonyPatches.cs" />
     <Compile Include="MomuDefOf.cs" />
-    <Compile Include="Momu_Need_Outdoors.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RimWorld\ScenPart_StartingAnimalofGender.cs" />
-    <Compile Include="ThoughtWorkers\ThoughtWorker_MomuNeedOutdoors.cs" />
     <Compile Include="ThoughtWorkers\ThoughtWorker_MomuWorkWithFriends.cs" />
   </ItemGroup>
   <ItemGroup>

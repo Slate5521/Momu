@@ -59,35 +59,7 @@ namespace Momu
                     type: typeof(ApparelUtility), 
                     name: nameof(ApparelUtility.HasPartsToWear)),
                 postfix: new HarmonyMethod(harmonyPatch, nameof(ApparelUtility__HasPartsToWearPostfix)));
-
-            /// <a cref="Pawn_NeedsTracker__ShouldHaveNeedPostfix"/>
-            harmony.Patch( 
-                original: AccessTools.Method(
-                    type: typeof(Pawn_NeedsTracker),
-                    name: @"ShouldHaveNeed"),
-                postfix: new HarmonyMethod(harmonyPatch, nameof(Pawn_NeedsTracker__ShouldHaveNeedPostfix), null));
         }
-
-        public static void Pawn_NeedsTracker__ShouldHaveNeedPostfix
-        (Pawn_NeedsTracker __instance, NeedDef nd, ref bool __result)
-        {
-            // Get the pawn through Reflection
-            Pawn p = typeof(Pawn_NeedsTracker)
-                        .GetField(@"pawn", BindingFlags.NonPublic | BindingFlags.Instance)
-                        .GetValue(__instance) as Pawn;
-
-            // Check if it's a Momu
-            if (p.def == MomuDefOf.Alien_Momu)
-            {
-                if (nd == MomuDefOf.Outdoors)
-                    __result = false;
-
-                if (nd == MomuDefOf.MomuNeedOutdoors)
-                    // Our own Momu outdoor need.
-                    __result = true;
-            }
-        }
-
 
         public static void ApparelUtility__HasPartsToWearPostfix
         (Pawn p, ThingDef apparel, ref bool __result)

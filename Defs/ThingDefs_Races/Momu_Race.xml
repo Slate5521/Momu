@@ -214,11 +214,11 @@
                         <original>SleptInBarracks</original>
                         <replacer>MomuBarracks</replacer> 
                     </li>
+                    <li>
+                        <original>NeedOutdoors</original>
+                        <replacer>MomuNeedOutdoors</replacer> 
+                    </li>
                 </replacerList>
-                <li>
-                    <original>NeedOutdoors</original>
-                    <replacer>MomuNeedOutdoors</replacer> 
-                </li>
                 
                 <cannotReceiveThoughts>
                     <li>EnvironmentDark</li>

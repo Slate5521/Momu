@@ -60,22 +60,32 @@
 
   <ThoughtDef>
     <defName>MomuNeedOutdoors</defName>
-    <workerClass>Momu.ThoughtWorker_MomuNeedOutdoors</workerClass>
+    <workerClass>ThoughtWorker_NeedOutdoors</workerClass>
     <stages>
       <li>
         <label>entombed underground</label>
         <description>I've been underground too long. I feel like the weight of this mountain is crushing me. I need to see the sky and feel the wind.</description>
-        <baseMoodEffect>-9</baseMoodEffect>
+        <baseMoodEffect>-7</baseMoodEffect>
       </li>
       <li>
         <label>trapped underground</label>
         <description>How long have I been underground? I need to get out in the fresh air and spend some time under the sky.</description>
-        <baseMoodEffect>-7</baseMoodEffect>
+        <baseMoodEffect>-5</baseMoodEffect>
       </li>
       <li>
-        <label>light trapped underground</label>
-        <description>[change me]</description>
-        <baseMoodEffect>-5</baseMoodEffect>
+        <label>cabin fever</label>
+        <description>I've spent so long indoors I feel like the roof is pressing in. I need to get out and smell the flowers.</description>
+        <baseMoodEffect>-2</baseMoodEffect>
+      </li>
+      <li>
+        <label>trapped indoors</label>
+        <description>I don't mind being indoors that much.</description>
+        <baseMoodEffect>0</baseMoodEffect>
+      </li>
+      <li>
+        <label>stuck indoors</label>
+        <description>I don't mind being indoors that much.</description>
+        <baseMoodEffect>0</baseMoodEffect>
       </li>
     </stages>
   </ThoughtDef>

@@ -13,8 +13,6 @@ namespace Momu
     public static class MomuDefOf
     {
         public static ThingDef Alien_Momu;
-        public static NeedDef MomuNeedOutdoors;
-        public static NeedDef Outdoors;
     }
 
 }
