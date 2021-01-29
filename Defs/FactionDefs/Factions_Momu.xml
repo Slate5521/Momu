@@ -13,7 +13,7 @@
     <canMakeRandomly>true</canMakeRandomly>
     <canSiege>true</canSiege>
     <canStageAttacks>true</canStageAttacks>
-    <leaderTitle>High Elder</leaderTitle>
+    <leaderTitle>high elder</leaderTitle>
 	<colorSpectrum>
 			<li>(247, 167, 27)</li>
 			<li>(252, 71, 152)</li>
@@ -63,8 +63,10 @@
         <kindDef>Combat</kindDef>
         <options>  
           <MomuGreenguard>7</MomuGreenguard>
-		   <MomuGreenguardRanger>3</MomuGreenguardRanger>
+		  <MomuGreenguardRanger>3</MomuGreenguardRanger>
 		  <MomuElderGreenguard>1</MomuElderGreenguard>
+		  <MomuHighElder>1</MomuHighElder>
+		  
         </options>
       </li>
 	  <li>
@@ -72,8 +74,9 @@
         <options>
           <MomuCitizen>15</MomuCitizen>
           <MomuGreenguard>3</MomuGreenguard>
-		   <MomuGreenguardRanger>3</MomuGreenguardRanger>
-		   <MomuElderGreenguard>1</MomuElderGreenguard>
+		  <MomuGreenguardRanger>3</MomuGreenguardRanger>
+		  <MomuElderGreenguard>1</MomuElderGreenguard>
+		  <MomuHighElder>1</MomuHighElder>
         </options>
       </li>
 	  <li>
@@ -94,15 +97,16 @@
 	  <li>
         <kindDef>Settlement</kindDef>
         <options>
-		  <MomuCitizen>5</MomuCitizen>
+		<MomuCitizen>5</MomuCitizen>
         <MomuGreenguard>6</MomuGreenguard>
 		<MomuGreenguardRanger>4</MomuGreenguardRanger>
 		<MomuElderGreenguard>2</MomuElderGreenguard>
+		<MomuHighElder>1</MomuHighElder>
         </options>
       </li>
     </pawnGroupMakers>
-    <homeIconPath>World/MomuBase</homeIconPath>
-    <expandingIconTexture>World/MomuBase</expandingIconTexture>
+    <factionIconPath>World/MomuBase</factionIconPath>
+    <settlementTexturePath>World/MomuBase</settlementTexturePath>
   </FactionDef>
 
 </Defs>

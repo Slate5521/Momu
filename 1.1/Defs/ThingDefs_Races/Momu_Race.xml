@@ -30,8 +30,8 @@
                     </li>
                 </forcedRaceTraitEntries>
 				<disallowedTraits>
-				    <li defName="Cannibal"/>
-                    <li defName="Psychopath"/>
+				<li>cannibal</li>
+				<li>psychopath</li>
 				</disallowedTraits>
 				<maxDamageForSocialfight>6</maxDamageForSocialfight>
 				<alienPartGenerator>      

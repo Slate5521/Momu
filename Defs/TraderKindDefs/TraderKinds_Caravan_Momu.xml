@@ -159,7 +159,7 @@
           <max>12</max>
         </countRange>
       </li>
-      <li Class="StockGenerator_BuyWeirdOrganic" />
+      
     </stockGenerators>
   </TraderKindDef>
 
@@ -234,7 +234,7 @@
 			<max>15</max>
 		</countRange>
       </li>
-      <li Class="StockGenerator_BuyWeirdOrganic" />
+      
     </stockGenerators>
   </TraderKindDef>
 
@@ -382,7 +382,6 @@
           <max>6</max>
         </countRange>
       </li>
-      <li Class="StockGenerator_BuyWeirdOrganic" />
     </stockGenerators>
   </TraderKindDef>
 
@@ -498,7 +497,7 @@
           <max>6</max>
         </countRange>
       </li>
-      <li Class="StockGenerator_BuyWeirdOrganic" />
+      
     </stockGenerators>
   </TraderKindDef>
 

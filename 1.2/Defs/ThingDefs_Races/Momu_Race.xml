@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-   <AlienRace.ThingDef_AlienRace ParentName="BasePawn">
+    <AlienRace.ThingDef_AlienRace ParentName="BasePawn">
         <defName>Alien_Momu</defName>
         <label>momu</label>
         <description>A mostly female race with long ears, Momu prize the more simple things in life, like community, farming and tend to form tight-knit communities. They have a raw vegetarian diet, and cannot digest meat.</description>
 		<alienRace>
-				<graphicPaths>
-				<li>
+			<graphicPaths>
+		    	<li>
 					<head>Pawn/Heads/</head>
 					<body>Pawn/Bodies/</body>
 				</li>
-				</graphicPaths>
-				<generalSettings>
-				<maleGenderProbability>0.1</maleGenderProbability>
+			</graphicPaths>
+			
+            <generalSettings>
+			    <maleGenderProbability>0.1</maleGenderProbability>
 				<forcedRaceTraitEntries>
                     <li>
                         <defName>Beauty</defName>
@@ -29,12 +30,15 @@
                         <chance>20</chance>
                     </li>
                 </forcedRaceTraitEntries>
-				<disallowedTraits>
-				<li>cannibal</li>
-				<li>psychopath</li>
+				
+                <disallowedTraits>
+				    <li defName="Cannibal"/>
+                    <li defName="Psychopath"/>
 				</disallowedTraits>
-				<maxDamageForSocialfight>6</maxDamageForSocialfight>
-				<alienPartGenerator>      
+				
+                <maxDamageForSocialfight>6</maxDamageForSocialfight>
+				
+                <alienPartGenerator>      
 					<aliencrowntypes>
 						<li>Average_Normal</li>
 					</aliencrowntypes>
@@ -42,6 +46,59 @@
                         <li>Male</li>
                         <li>Female</li>
                     </alienbodytypes>
+
+                    <colorChannels>
+                        <li>
+                            <name>skin</name>
+                            <first Class="Momu.ColorGenerator_MomuTones">
+                                <options>
+                                    <li>
+                                        <weight>2</weight>
+                                        <only>RGBA(0.768,0.611,0.309,1)</only>
+                                    </li>
+                                    <li>
+                                        <weight>5</weight>
+                                        <only>RGBA(0.878, 0.658, 0.471,1)</only>
+                                    </li>
+                                    <li>
+                                        <weight>5</weight>
+                                        <only>RGBA(0.172, 0.168, 0.160, 1)</only>
+                                    </li>
+                                    <li>
+                                        <weight>5</weight>
+                                        <only>RGBA(0.568, 0.239, 0.074,1)</only>
+                                    </li>
+                                </options>
+                            </first>
+                        </li>
+                        <li>
+                            <name>hair</name>
+                            <first Class="Momu.ColorGenerator_MomuTones">
+                                <options>
+                                    <li>
+                                        <weight>5</weight>
+                                        <only>RGBA(0.722,0.541,0.388,1)</only>
+                                    </li>
+                                    <li>
+                                        <weight>5</weight>
+                                        <only>RGBA(0.878, 0.658, 0.471,1)</only>
+                                    </li>
+                                    <li>
+                                        <weight>5</weight>
+                                        <only>RGBA(1.000, 0.937, 0.835, 1.000)</only>
+                                    </li>
+                                    <li>
+                                        <weight>5</weight>
+                                        <only>RGBA(0.627, 0.322, 0.176,1.000)</only>
+                                    </li>
+                                    <li>
+                                        <weight>5</weight>
+                                        <only>RGBA(0.545, 0.271, 0.075,1.000)</only>
+                                    </li>
+                                </options>
+                            </first>
+                        </li>
+                    </colorChannels>
 				
 				<!--	<useGenderedHeads>false</useGenderedHeads>
 					<useGenderedBodies>true</useGenderedBodies> -->
@@ -51,7 +108,7 @@
 							<path>Pawn/Ears/MM_Ear</path>
 							<bodyPart>left ear</bodyPart>
 							<inFrontOfBody>true</inFrontOfBody>
-							<useSkinColor>true</useSkinColor>
+							<!--<useSkinColor>true</useSkinColor>-->
 							<offsets>
 								<south>
 									<bodyTypes>
@@ -134,79 +191,15 @@
 							</hiddenUnderApparelFor>
 						</li> -->
 					</bodyAddons>
-					
-					<colorChannels>
-						<li>
-							<name>skin</name>
-							<first Class="ColorGenerator_Options">
-								<options>
-                    <li>
-                        <weight>5</weight>
-                        <only>RGBA(0.722,0.541,0.388,1)</only>
-                    </li>
-                    <li>
-                        <weight>5</weight>
-                        <only>RGBA(0.878, 0.658, 0.471,1)</only>
-                    </li>
-					 <li>
-                        <weight>5</weight>
-                        <only>RGBA(1.000, 0.937, 0.835, 1.000)</only>
-                    </li>
-					<li>
-                        <weight>5</weight>
-                        <only>RGBA(0.627, 0.322, 0.176,1.000)</only>
-                    </li>
-					<li>
-                        <weight>5</weight>
-                        <only>RGBA(0.545, 0.271, 0.075,1.000)</only>
-                    </li>
-                </options>
-							</first>
-							<second Class="ColorGenerator_Options">
-								<options>
-									<li>
-										<weight>10</weight>
-										<only>RGB(255, 255, 255)</only>
-									</li>
-								</options>
-							</second>
-						</li>
-						<li>
-							<name>hair</name>
-							<first Class="AlienRace.ColorGenerator_CustomAlienChannel">
-								<colorChannel>skin_2</colorChannel>
-							</first>
-							<second Class="ColorGenerator_Options">
-								<options>
-									<options>
-                    <li>
-                        <weight>2</weight>
-                        <only>RGBA(0.768,0.611,0.309,1)</only>
-                    </li>
-                    <li>
-                        <weight>5</weight>
-                        <only>RGBA(0.878, 0.658, 0.471,1)</only>
-                    </li>
-					 <li>
-                        <weight>5</weight>
-                        <only>RGBA(0.172, 0.168, 0.160, 1)</only>
-                    </li>
-					<li>
-                        <weight>5</weight>
-                        <only>RGBA(0.568, 0.239, 0.074,1)</only>
-                    </li>
-                </options>
-								</options>
-							</second>
-						</li>
-					</colorChannels>
+			<!--<useSkincolorForHair>false</useSkincolorForHair>-->
                     <customDrawSize>(.9, .9)</customDrawSize>
                     <customPortraitDrawSize>(1.0, 1.0)</customPortraitDrawSize>
-            </alienPartGenerator>
-			<humanRecipeImport>true</humanRecipeImport>
+                </alienPartGenerator>
+			    
+                <humanRecipeImport>true</humanRecipeImport>
+
 		    </generalSettings>
-			
-		
+
             <hairSettings>
                 <hasHair>true</hasHair>
                 <getsGreyAt>75</getsGreyAt>
@@ -214,30 +207,36 @@
                     <li>Momu</li>
                 </hairTags>
             </hairSettings>
-			<thoughtSettings>
-			 <replacerList>
-                <li>
-                    <original>SleptInBarracks</original>
-                    <replacer>MomuBarracks</replacer> 
-                </li>
-            </replacerList>
+			
+            <thoughtSettings>
+                <replacerList>
+                    <li>
+                        <original>SleptInBarracks</original>
+                        <replacer>MomuBarracks</replacer> 
+                    </li>
+                    <li>
+                        <original>NeedOutdoors</original>
+                        <replacer>MomuNeedOutdoors</replacer> 
+                    </li>
+                </replacerList>
+                
                 <cannotReceiveThoughts>
-                <li>EnvironmentDark</li>
-                <li>CabinFever</li>
-				<li>AteRawFood</li>
+                    <li>EnvironmentDark</li>
+                    <li>AteRawFood</li>
                 </cannotReceiveThoughts>
             </thoughtSettings>
+
 			<relationSettings>
-			<relationChanceModifierChild>1</relationChanceModifierChild>
-            <relationChanceModifierExLover>2</relationChanceModifierExLover>
-            <relationChanceModifierExSpouse>1</relationChanceModifierExSpouse>
-            <relationChanceModifierFiance>1</relationChanceModifierFiance>
-            <relationChanceModifierLover>2</relationChanceModifierLover>
-            <relationChanceModifierParent>1</relationChanceModifierParent>
-            <relationChanceModifierSibling>3</relationChanceModifierSibling>
-            <relationChanceModifierSpouse>1</relationChanceModifierSpouse>
+                <relationChanceModifierChild>1</relationChanceModifierChild>
+                <relationChanceModifierExLover>2</relationChanceModifierExLover>
+                <relationChanceModifierExSpouse>1</relationChanceModifierExSpouse>
+                <relationChanceModifierFiance>1</relationChanceModifierFiance>
+                <relationChanceModifierLover>2</relationChanceModifierLover>
+                <relationChanceModifierParent>1</relationChanceModifierParent>
+                <relationChanceModifierSibling>3</relationChanceModifierSibling>
+                <relationChanceModifierSpouse>1</relationChanceModifierSpouse>
 			</relationSettings>
-            </alienRace>
+        </alienRace>
         <!--<uiIconPath>Things/Pawn/Humanlike/UI/IconHuman</uiIconPath>-->
         <statBases>
             <MarketValue>1900</MarketValue>
@@ -252,24 +251,24 @@
             <SocialImpact>1.40</SocialImpact>
 			<Mass>75.0</Mass>
         </statBases>
-       <tools>
-      <li>
-        <label>left claw</label>
-        <capacities>
-          <li>Scratch</li>
-        </capacities>
-        <power>9</power>
-        <cooldownTime>1.65</cooldownTime>
-        <linkedBodyPartsGroup>Feet</linkedBodyPartsGroup>
-        <surpriseAttack>
-          <extraMeleeDamages>
+        <tools>
             <li>
-              <def>Stun</def>
-              <amount>20</amount>
+                <label>left claw</label>
+                <capacities>
+                    <li>Scratch</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>1.65</cooldownTime>
+                <linkedBodyPartsGroup>Feet</linkedBodyPartsGroup>
+                <surpriseAttack>
+                <extraMeleeDamages>
+                    <li>
+                    <def>Stun</def>
+                    <amount>20</amount>
+                    </li>
+                </extraMeleeDamages>
+                </surpriseAttack>
             </li>
-          </extraMeleeDamages>
-        </surpriseAttack>
-      </li>
 	   <li>
         <label>right claw</label>
         <capacities>

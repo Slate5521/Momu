@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
- 
- <ThoughtDef>
+  <ThoughtDef>
     <defName>MomuBarracks</defName>
     <durationDays>1</durationDays>
     <stackLimit>1</stackLimit>
     <stages>
       <li>
-        <label>sleeping in barrack</label>
-        <description>I don't mind sleeping together with other people! [stages bugged]</description>
-        <baseMoodEffect>2</baseMoodEffect>
+        <label>awful barrack</label>
+        <description>I don't mind sleeping together with other people, but the surroundings are pretty awful...</description>
+        <baseMoodEffect>-2</baseMoodEffect>
       </li>
- <!-- Bugged, fix soon?
- <li>
+      <li>
         <label>dull barrack</label>
         <description>I don't mind sleeping together with other people, but the surroundings are pretty dull...</description>
         <baseMoodEffect>-1</baseMoodEffect>
@@ -56,16 +54,36 @@
         <label>wondrously impressive barrack</label>
         <description>I don't mind sleeping together with other people - and the room is beyond words... a slice of heaven!</description>
         <baseMoodEffect>6</baseMoodEffect>
-      </li> -->
+      </li>
     </stages>
-
   </ThoughtDef>
-  
-    <ThoughtDef>
+
+  <ThoughtDef>
+    <defName>MomuNeedOutdoors</defName>
+    <workerClass>Momu.ThoughtWorker_MomuNeedOutdoors</workerClass>
+    <stages>
+      <li>
+        <label>entombed underground</label>
+        <description>I've been underground too long. I feel like the weight of this mountain is crushing me. I need to see the sky and feel the wind.</description>
+        <baseMoodEffect>-9</baseMoodEffect>
+      </li>
+      <li>
+        <label>trapped underground</label>
+        <description>How long have I been underground? I need to get out in the fresh air and spend some time under the sky.</description>
+        <baseMoodEffect>-7</baseMoodEffect>
+      </li>
+      <li>
+        <label>light trapped underground</label>
+        <description>[change me]</description>
+        <baseMoodEffect>-5</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
     <defName>WorkingNearOthers_Momu</defName>
     <workerClass>Momu.ThoughtWorker_MomuWorkWithFriends</workerClass>
     <nullifyingTraits>
-    
     </nullifyingTraits>
     <stages>
       <li>
@@ -75,5 +93,4 @@
       </li>
     </stages>
   </ThoughtDef>
-
 </Defs>

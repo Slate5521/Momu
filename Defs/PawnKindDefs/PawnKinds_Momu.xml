@@ -157,6 +157,51 @@
     <invNutrition>2.55</invNutrition>
   </PawnKindDef>
   
+  <PawnKindDef ParentName="BaseMomuPawnKindBase">
+    <defName>MomuHighElder</defName>
+    <label>high elder</label>
+	<factionLeader>true</factionLeader>
+    <race>Alien_Momu</race>
+    <combatPower>40</combatPower>
+    <baseRecruitDifficulty>0.80</baseRecruitDifficulty>
+    <defaultFactionType>Momu</defaultFactionType>
+    <backstoryCryptosleepCommonality>0.1</backstoryCryptosleepCommonality>
+    <isFighter>true</isFighter>
+    <gearHealthRange>
+      <min>1</min>
+      <max>2.0</max>
+    </gearHealthRange>
+    <apparelMoney>
+      <min>2000</min>
+      <max>5000</max>
+    </apparelMoney>
+    <apparelTags>
+      <li>MedievalMilitary</li>
+	  <li>Medieval</li>
+	  <li>Momu_Clothes</li> 
+    </apparelTags>
+	<apparelRequired>
+	<li>Apparel_PlateArmor</li>
+	</apparelRequired>
+	 <weaponTags>
+	  <li>MedievalMeleeAdvanced</li>
+	  <li>MomuMelee</li>
+    </weaponTags>
+    <apparelAllowHeadgearChance>0.4</apparelAllowHeadgearChance>
+	<backstoryCategories>
+		<li>Momu</li>
+	</backstoryCategories>
+    <techHediffsMoney>
+      <min>2000</min>
+      <max>3000</max>
+    </techHediffsMoney>
+    <techHediffsTags>
+      <li>Advanced</li>
+    </techHediffsTags>
+    <techHediffsChance>0.01</techHediffsChance>
+    <invNutrition>2.55</invNutrition>
+  </PawnKindDef>
+  
    <PawnKindDef ParentName="BaseMomuPawnKindBase">
     <defName>MomuGreenguardRanger</defName>
     <label>greenguard ranger</label>

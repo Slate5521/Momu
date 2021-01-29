@@ -16,7 +16,6 @@
       </li>
     </comps>
     <recipeMaker>
-      <workSpeedStat>SmithingSpeed</workSpeedStat>
       <workSkill>Crafting</workSkill>
       <recipeUsers>
         <li>ElectricSmithy</li>

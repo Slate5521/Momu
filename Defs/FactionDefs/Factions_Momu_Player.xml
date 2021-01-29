@@ -2,7 +2,7 @@
 <Defs>
 
   <FactionDef Abstract="True" Name="MomuFactionBase">
-    <homeIconPath>World/WorldObjects/DefaultSettlement</homeIconPath>
+    <factionIconPath>World/WorldObjects/DefaultSettlement</factionIconPath>
 	<colorSpectrum>
       <li>(0, 0.737, 0.847)</li>
     </colorSpectrum>
@@ -19,8 +19,8 @@
     <factionNameMaker>NamerFactionOutlander</factionNameMaker>
     <techLevel>Ultra</techLevel>
     <backstoryCategories><li>Momu</li></backstoryCategories>
-    <homeIconPath>World/MomuBase</homeIconPath>
-    <expandingIconTexture>World/WorldObjects/Expanding/Town</expandingIconTexture>
+    <factionIconPath>World/MomuBase</factionIconPath>
+    <settlementTexturePath>World/WorldObjects/MomuBase</settlementTexturePath>
 	<playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
 	<settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
 	<geneticVariance>1</geneticVariance>
