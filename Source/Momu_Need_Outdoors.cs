@@ -1,5 +1,5 @@
 ﻿/* HarmonyPatches.cs
- * Momu 2021
+ * Momu by Rekasa
  * 
  * Momu require a custom outdoors need since they do not need to go outside as often. Sorry Tynan for ripping code straight from Rimworld!
  * 

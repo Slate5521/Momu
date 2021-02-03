@@ -1,5 +1,5 @@
 ﻿/* CompApparelBodyRestrictions.cs
- * Momu 2021
+ * Momu by Rekasa
  *
  * Originally created by Ogliss.
 */

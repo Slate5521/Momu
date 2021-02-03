@@ -39,8 +39,11 @@
   <ItemGroup>
     <Compile Include="ColorGenerator_MomuTones.cs" />
     <Compile Include="Components\CompApparelBodyRestriction.cs" />
+    <Compile Include="Components\CompLai.cs" />
+    <Compile Include="Components\CompProperties_Lai.cs" />
     <Compile Include="Components\CompProperties_ApparelBodyRestriction.cs" />
     <Compile Include="HarmonyPatches.cs" />
+    <Compile Include="Lai\LaiLifeStage.cs" />
     <Compile Include="MomuDefOf.cs" />
     <Compile Include="Momu_Need_Outdoors.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

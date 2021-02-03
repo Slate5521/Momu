@@ -1,5 +1,5 @@
 ﻿/* ColorGenerator_MomuTones.cs
- * Momu 2021
+ * Momu by Rekasa
  *
  * Generates fur tones based on a list of provided weighted colors.
  * 

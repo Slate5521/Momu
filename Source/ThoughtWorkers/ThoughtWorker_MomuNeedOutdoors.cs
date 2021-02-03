@@ -1,5 +1,5 @@
 ﻿/* CompApparelBodyRestrictions.cs
- * Momu 2021
+ * Momu by Rekasa
  * 
  * This class is for creating a customized Outdoors need for the Momu. They don't get negative moodlets from being inside too quickly.
  *

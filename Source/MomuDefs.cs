@@ -1,5 +1,5 @@
-﻿/* MomuDefOf.cs
- * Momu 2021
+﻿/* MomuDefs.cs
+ * Momu by Rekasa
  * 
  * Created by IAmMiko.
 */
@@ -13,8 +13,15 @@ namespace Momu
     public static class MomuDefOf
     {
         public static ThingDef Alien_Momu;
+        
         public static NeedDef MomuNeedOutdoors;
         public static NeedDef Outdoors;
     }
 
+    [DefOf]
+    public static class LaiDefOf
+    {
+        public static ThingDef Momu_Lai_Larva;
+        public static ThingDef Momu_Lai_Egg_Fertilized;
+    }
 }
