@@ -8,6 +8,7 @@ namespace Momu
 {
     public enum LaiLifeStage
     {
+        None,
         Egg,
         Larva,
         Chrysalis,

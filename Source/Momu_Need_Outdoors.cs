@@ -85,7 +85,7 @@ namespace Momu
 				num = Delta_OutdoorsNoRoof;
 			}
 			else if (roofDef.isThickRoof)
-			{
+			{	
 				num = Delta_OutdoorsThickRoof;
 			}
 			else

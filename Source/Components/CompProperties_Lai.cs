@@ -6,13 +6,13 @@
 
 namespace Momu
 {
+    using System;
     using Verse;
 
     public class CompProperties_Lai : CompProperties
     {
         public CompProperties_Lai() => this.compClass = typeof(CompLai);
 
-        LaiLifeStage lifeStage;
-        ThingDef nextStage = null;
+        public LaiLifeStage lifeStage = LaiLifeStage.None;
     }
 }
