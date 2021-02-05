@@ -29,8 +29,9 @@ namespace Momu
 
             switch (laiCompProps.lifeStage)
             {
+                default:
                 case LaiLifeStage.None:
-                    Debug.LogError("[Momu] Tried to initialize CompLai with LaiLifeStage.None!");
+                    Debug.LogError("[Momu] Tried to initialize CompLai with LaiLifeStage.None or default enum value!");
                     return;
                 case LaiLifeStage.Egg:
                     lifeStageComponent = new LaiStageEgg(this);
