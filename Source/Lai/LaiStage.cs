@@ -51,8 +51,6 @@ namespace Momu
             IntVec3 oldPawnPos = Parent.Position;
             Map oldMap         = Parent.Map;
 
-            Parent.def = nextStage;
-
             Pawn newPawn = PawnGenerator.GeneratePawn(
                 TailorPawnNext(
                     defName: nextStage.defName, 
