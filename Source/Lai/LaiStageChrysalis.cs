@@ -3,39 +3,30 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Verse;
 
 namespace Momu
 {
-    public class LaiStageChrysalis : ILaiStage
+    public class LaiStageChrysalis : LaiStage
     {
-        public LaiStageChrysalis()
+        public LaiStageChrysalis(CompLai comp) : base(comp)
         {
 
         }
 
-        public void CompTick(CompLai compInstance)
-        {
-            throw new NotImplementedException();
-        }
+        public override void CompTick(CompLai compLai)
+        { return; }
 
-        public void CompTickRare(CompLai compInstance)
-        {
-            throw new NotImplementedException();
-        }
+        public override void CompTickRare(CompLai compLai)
+        { return; }
 
-        public void Initialize(CompLai compLai, CompProperties_Lai props)
-        {
-            throw new NotImplementedException();
-        }
+        public override string GetInspectionString()
+        { return String.Empty; }
 
-        public void PostExposeData(CompLai compInstance)
-        {
-            throw new NotImplementedException();
-        }
+        public override void PostExposeData(CompLai compInstance)
+        { return; }
 
-        public void PostSpawnSetup(CompLai compLai, bool respawningAfterLoad)
-        {
-            throw new NotImplementedException();
-        }
+        public override void PostSpawnSetup(CompLai compLai, bool respawningAfterLoad)
+        { return; }
     }
 }

@@ -8,11 +8,12 @@ namespace Momu
 {
     using Verse;
     using UnityEngine;
+    using System;
 
     public class CompLai : ThingComp
     {
         // Using an interface so we can have a single comp but with different behavior sets that change based on the lifestage.
-        ILaiStage lifeStageComponent;
+        LaiStage lifeStageComponent;
 
         public CompProperties_Lai Props => (CompProperties_Lai)this.props;
 
@@ -32,27 +33,40 @@ namespace Momu
                     Debug.LogError("[Momu] Tried to initialize CompLai with LaiLifeStage.None!");
                     return;
                 case LaiLifeStage.Egg:
-                    lifeStageComponent = new LaiStageEgg();
+                    lifeStageComponent = new LaiStageEgg(this);
                     break;
                 case LaiLifeStage.Larva:
-                    lifeStageComponent = new LaiStageLarva();
+                    lifeStageComponent = new LaiStageLarva(this);
                     break;
                 case LaiLifeStage.Chrysalis:
-                    lifeStageComponent = new LaiStageChrysalis();
+                    lifeStageComponent = new LaiStageChrysalis(this);
                     break;
                 case LaiLifeStage.FullyGrown:
-                    lifeStageComponent = new LaiStageAdult();
+                    lifeStageComponent = new LaiStageAdult(this);
                     break;
             }
 
-            lifeStageComponent.Initialize(this, laiCompProps);
             base.Initialize(props);
         }
 
         public override void PostSpawnSetup(bool respawningAfterLoad)
         {
-            lifeStageComponent.PostSpawnSetup(this, respawningAfterLoad);
             base.PostSpawnSetup(respawningAfterLoad);
+
+            lifeStageComponent.PostSpawnSetup(this, respawningAfterLoad);
+        }
+
+        public override string CompInspectStringExtra()
+        {
+            string inspectString = lifeStageComponent.GetInspectionString();
+
+            // Check if there's actually a return string
+            if (inspectString.NullOrEmpty())
+                // There's nothing to be seen, so let's just return the base.
+                return base.CompInspectStringExtra();
+            else
+                // There's something to be seen, so let's use ours.
+                return inspectString;
         }
 
         public override void CompTick()
@@ -65,6 +79,11 @@ namespace Momu
                 lifeStageComponent.CompTickRare(this);
 
             base.CompTick();
+        }
+
+        internal void PostGeneratePawn()
+        {
+            lifeStageComponent.PostGeneratePawn(this);
         }
     }
 }

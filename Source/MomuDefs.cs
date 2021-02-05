@@ -23,5 +23,7 @@ namespace Momu
     {
         public static ThingDef Momu_Lai_Larva;
         public static ThingDef Momu_Lai_Egg_Fertilized;
+
+        public static HediffDef LarvaHediff;
     }
 }

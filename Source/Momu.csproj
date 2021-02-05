@@ -44,7 +44,7 @@
     <Compile Include="Components\CompProperties_ApparelBodyRestriction.cs" />
     <Compile Include="HarmonyPatches.cs" />
     <Compile Include="Lai\LaiLifeStage.cs" />
-    <Compile Include="Lai\ILaiStage.cs" />
+    <Compile Include="Lai\LaiStage.cs" />
     <Compile Include="Lai\LaiStageAdult.cs" />
     <Compile Include="Lai\LaiStageEgg.cs" />
     <Compile Include="Lai\LaiStageChrysalis.cs" />

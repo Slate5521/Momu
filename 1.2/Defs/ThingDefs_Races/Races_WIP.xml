@@ -98,12 +98,10 @@
       </li>
     </tools>
 		<comps>
-			<li Class="AnimalBehaviours.CompProperties_Metamorphosis">
-				<timeInYears>0.02</timeInYears>
-				<pawnToTurnInto>Momu_Lai_Adult</pawnToTurnInto>
-			</li>
 			<li Class="Momu.CompProperties_Lai">
+				<lifeStageTicks>720000</lifeStageTicks>
 				<lifeStage>Larva</lifeStage>
+				<nextLifeStage>FullyGrown</nextLifeStage>
 			</li>
 		</comps>
 
@@ -287,7 +285,6 @@
 			<useMeatFrom>Megaspider</useMeatFrom>
 			<manhunterOnDamageChance>0.02</manhunterOnDamageChance>
 			<manhunterOnTameFailChance>0.00</manhunterOnTameFailChance>
-			<trainability>Advanced</trainability>
 			<nameOnTameChance>1</nameOnTameChance> <!-- Same as the fox. -->
 			<trainability>Advanced</trainability> <!-- Same as the fox. Due to bodysize < 0.65 but >0.40, can haul but not rescue. -->
 			<wildness>0.00</wildness> <!-- Same as many "domestic" animals. Importantly, means that Lai are trivial to train and will never have their tameness decay to 0.-->

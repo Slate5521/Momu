@@ -66,6 +66,23 @@ namespace Momu
                     type: typeof(Pawn_NeedsTracker),
                     name: @"ShouldHaveNeed"),
                 postfix: new HarmonyMethod(harmonyPatch, nameof(Pawn_NeedsTracker__ShouldHaveNeedPostfix), null));
+
+            harmony.Patch(
+                original: AccessTools.Method(
+                    type: typeof(PawnGenerator),
+                    name: @"GeneratePawn",
+                    parameters: new Type[] { typeof(PawnGenerationRequest) }),
+                postfix: new HarmonyMethod(harmonyPatch, nameof(PawnGenerator__GeneratePawnPostfix)));
+        }
+
+        public static void PawnGenerator__GeneratePawnPostfix(PawnGenerationRequest request, ref Pawn __result)
+        {
+            var laiComp = __result.GetComp<CompLai>();
+
+            if (!(laiComp is null))
+            {
+                laiComp.PostGeneratePawn();
+            }
         }
 
         public static void Pawn_NeedsTracker__ShouldHaveNeedPostfix

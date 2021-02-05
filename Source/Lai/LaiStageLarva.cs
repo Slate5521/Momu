@@ -1,45 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/* LaiStageLarva.cs
+ * Momu by Rekasa
+ * 
+ * Created by IAmMiko.
+ */
 
 namespace Momu
 {
-    public class LaiStageLarva : ILaiStage
+    using RimWorld;
+    using UnityEngine;
+    using Verse;
+
+    public class LaiStageLarva : LaiStage
     {
-        public LaiStageLarva()
-        {
+        public LaiStageLarva(CompLai comp) : base(comp) { }
 
+        public override void PostExposeData(CompLai compInstance)
+        { 
+            Scribe_Values.Look(ref LifeStageTicks, @"LifeStageTicks", 0);
         }
 
-        public void CompTick(CompLai compInstance)
+        public override void PostSpawnSetup(CompLai compLai, bool respawningAfterLoad) { }
+        public override void PostGeneratePawn(CompLai compInstance) 
         {
-            throw new NotImplementedException();
+            Parent.health.AddHediff(LaiDefOf.LarvaHediff);
         }
 
-        public void CompTickRare(CompLai compInstance)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Initialize(CompLai compLai, CompProperties_Lai props)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void PostExposeData(CompLai compInstance)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void PostSpawnSetup(CompLai compLai, bool respawningAfterLoad)
-        {
-            // Check if this is the first time it's being spawned, ever.
-            if(!respawningAfterLoad)
-            {
-
-            }
-        }
+        public override string GetInspectionString()
+            => string.Format(@"{0}: {1}", 
+                             @"Time until chrysalis".Translate(), 
+                             (ParentComp.Props.lifeStageTicks - LifeStageTicks).ToStringTicksToPeriod(true, false, false, true));
     }
 }

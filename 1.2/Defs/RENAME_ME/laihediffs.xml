@@ -1,0 +1,19 @@
+<Defs>
+    <HediffDef>
+        <defName>LarvaHediff</defName>
+        <label>Larva</label>
+        <description>I need a description.</description>
+        <stages>
+        <li>
+            <label>default</label>
+            <becomeVisible>false</becomeVisible>
+            <capMods>
+                <li>
+                    <capacity>Moving</capacity>
+                    <setMax>0</setMax>
+                </li>
+            </capMods>
+        </li>
+        </stages>
+  </HediffDef>
+</Defs>
