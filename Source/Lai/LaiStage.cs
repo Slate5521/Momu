@@ -33,14 +33,6 @@ namespace Momu
             IntVec3 oldPawnPos = Parent.Position;
             Map oldMap         = Parent.Map;
 
-            Debug.Log("DOGGOGAGASDGW");
-
-            Debug.Log("BBBBBBBBBBBBBB1: " + nextStage.defName);
-            Debug.Log("BBBBBBBBBBBBBB1b: " + PawnKindDef.Named(nextStage.defName));
-            Debug.Log("BBBBBBBBBBBBBB2: " + Parent.Faction);
-            Debug.Log("BBBBBBBBBBBBBB3: " + Parent.Name.ToString());
-            Debug.Log("BBBBBBBBBBBBBB4: " + Parent.ageTracker.AgeBiologicalYearsFloat);
-            Debug.Log("BBBBBBBBBBBBBB5: " + Parent.ageTracker.AgeChronologicalYearsFloat);
             Pawn newPawn = PawnGenerator.GeneratePawn(
                 TailorPawnNext(
                     defName: nextStage.defName, 
@@ -49,10 +41,8 @@ namespace Momu
                     bioAge: Parent.ageTracker.AgeBiologicalYearsFloat, 
                     chronoAge: Parent.ageTracker.AgeChronologicalYearsFloat));
 
-            Debug.Log("AAAAAAAAAAAAAA3");
             Parent.Destroy();
 
-            Debug.Log("AAAAAAAAAAAAAA4");
             GenSpawn.Spawn(newPawn, oldPawnPos, oldMap);
             SoundDefOf.Hive_Spawn.PlayOneShot(new TargetInfo(oldPawnPos, oldMap));
         }
