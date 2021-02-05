@@ -28,6 +28,6 @@ namespace Momu
         public override string GetInspectionString()
             => string.Format(@"{0}: {1}", 
                              @"Time until chrysalis".Translate(), 
-                             (ParentComp.Props.lifeStageTicks - LifeStageTicks).ToStringTicksToPeriod(true, false, false, true));
+                             Mathf.Max(ParentComp.Props.lifeStageTicks - LifeStageTicks, 0).ToStringTicksToPeriod(true, false, false, true));
     }
 }

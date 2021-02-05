@@ -19,30 +19,12 @@ namespace Momu
         protected Pawn Parent => ParentComp.parent as Pawn;
         protected bool ShouldEvolve
             => LifeStageTicks >= ParentComp.Props.lifeStageTicks && 
-               GetNextStage() != LaiLifeStage.None;
+               ParentComp.Props.nextLifeStage != LaiLifeStage.None;
         
         protected LaiStage(CompLai comp)
         {
             ParentComp = comp;
             LifeStageTicks = 0;
-        }
-
-        public LaiLifeStage GetNextStage()
-        {
-            switch(ParentComp.Props.nextLifeStage)
-            {
-                default: 
-                case LaiLifeStage.None:
-                    return LaiLifeStage.None;
-                case LaiLifeStage.Egg:
-                    return LaiLifeStage.Larva;
-                case LaiLifeStage.Larva:
-                    return LaiLifeStage.Chrysalis;
-                case LaiLifeStage.Chrysalis:
-                    return LaiLifeStage.FullyGrown;
-                case LaiLifeStage.FullyGrown:
-                    goto case LaiLifeStage.None;
-            }
         }
 
         private void EvolveNow()
@@ -51,6 +33,14 @@ namespace Momu
             IntVec3 oldPawnPos = Parent.Position;
             Map oldMap         = Parent.Map;
 
+            Debug.Log("DOGGOGAGASDGW");
+
+            Debug.Log("BBBBBBBBBBBBBB1: " + nextStage.defName);
+            Debug.Log("BBBBBBBBBBBBBB1b: " + PawnKindDef.Named(nextStage.defName));
+            Debug.Log("BBBBBBBBBBBBBB2: " + Parent.Faction);
+            Debug.Log("BBBBBBBBBBBBBB3: " + Parent.Name.ToString());
+            Debug.Log("BBBBBBBBBBBBBB4: " + Parent.ageTracker.AgeBiologicalYearsFloat);
+            Debug.Log("BBBBBBBBBBBBBB5: " + Parent.ageTracker.AgeChronologicalYearsFloat);
             Pawn newPawn = PawnGenerator.GeneratePawn(
                 TailorPawnNext(
                     defName: nextStage.defName, 
@@ -59,21 +49,25 @@ namespace Momu
                     bioAge: Parent.ageTracker.AgeBiologicalYearsFloat, 
                     chronoAge: Parent.ageTracker.AgeChronologicalYearsFloat));
 
+            Debug.Log("AAAAAAAAAAAAAA3");
             Parent.Destroy();
 
+            Debug.Log("AAAAAAAAAAAAAA4");
             GenSpawn.Spawn(newPawn, oldPawnPos, oldMap);
             SoundDefOf.Hive_Spawn.PlayOneShot(new TargetInfo(oldPawnPos, oldMap));
         }
 
         public virtual void CompTick(CompLai compInstance)
-        { return; }
+        { 
+            ++LifeStageTicks; 
+        }
 
         public virtual void CompTickRare(CompLai compInstance)
         {
-            LifeStageTicks += 250;
-
             if (ShouldEvolve)
+            {
                 EvolveNow();
+            }
         }
 
         public virtual void PostGeneratePawn(CompLai compInstance)
@@ -86,7 +80,7 @@ namespace Momu
                 kind: PawnKindDef.Named(defName),
                 faction: faction,
                 context: PawnGenerationContext.NonPlayer,
-                newborn: true,
+                newborn: false,
                 allowAddictions: false,
                 fixedBirthName: name,
                 fixedBiologicalAge: bioAge,
