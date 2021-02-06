@@ -25,6 +25,11 @@ namespace Momu
             Parent.health.AddHediff(LaiDefOf.LarvaHediff);
         }
 
+        protected override void HandleEvolveDiffs(Pawn oldPawn, ref Pawn newPawn)
+        {
+            (newPawn.GetComp<CompLai>().LifeStageComponent as LaiStageChrysalis).Notify_PreEvolveCircumstances(oldPawn.CurrentBed());
+        }
+
         public override string GetInspectionString()
             => string.Format(@"{0}: {1}", 
                              @"Time until chrysalis".Translate(), 

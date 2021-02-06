@@ -43,6 +43,8 @@
     <Compile Include="Components\CompProperties_Lai.cs" />
     <Compile Include="Components\CompProperties_ApparelBodyRestriction.cs" />
     <Compile Include="HarmonyPatches.cs" />
+    <Compile Include="Lai\JobDriver_Metamorphosis.cs" />
+    <Compile Include="Lai\JobGiver_Metamorphosis.cs" />
     <Compile Include="Lai\LaiLifeStage.cs" />
     <Compile Include="Lai\LaiStage.cs" />
     <Compile Include="Lai\LaiStageAdult.cs" />

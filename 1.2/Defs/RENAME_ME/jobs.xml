@@ -1,0 +1,13 @@
+<Defs>
+    <JobDef>
+        <defName>Metamorphosing</defName>
+        <driverClass>Momu.JobDriver_Metamorphosis</driverClass>
+        <reportString>metamorphosing.</reportString>
+        <casualInterruptible>false</casualInterruptible>
+        <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+        <playerInterruptible>false</playerInterruptible>
+        <collideWithPawns>false</collideWithPawns>
+        <neverFleeFromEnemies>true</neverFleeFromEnemies>
+        <faceDir>South</faceDir>
+    </JobDef>
+</Defs>

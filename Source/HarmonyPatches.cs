@@ -14,6 +14,7 @@ namespace Momu
     using System.Reflection;
     using HarmonyLib;
     using RimWorld;
+    using UnityEngine;
     using Verse;
 
     [StaticConstructorOnStartup]
@@ -73,6 +74,8 @@ namespace Momu
                     name: @"GeneratePawn",
                     parameters: new Type[] { typeof(PawnGenerationRequest) }),
                 postfix: new HarmonyMethod(harmonyPatch, nameof(PawnGenerator__GeneratePawnPostfix)));
+
+
         }
 
         public static void PawnGenerator__GeneratePawnPostfix(PawnGenerationRequest request, ref Pawn __result)

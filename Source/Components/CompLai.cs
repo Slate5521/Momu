@@ -13,13 +13,13 @@ namespace Momu
     public class CompLai : ThingComp
     {
         // Using an interface so we can have a single comp but with different behavior sets that change based on the lifestage.
-        LaiStage lifeStageComponent;
+        public LaiStage LifeStageComponent { get; protected set; }
 
         public CompProperties_Lai Props => (CompProperties_Lai)this.props;
 
         public override void PostExposeData()
         {
-            lifeStageComponent.PostExposeData(this);
+            LifeStageComponent.PostExposeData(this);
             base.PostExposeData();
         }
 
@@ -34,16 +34,16 @@ namespace Momu
                     Debug.LogError("[Momu] Tried to initialize CompLai with LaiLifeStage.None or default enum value!");
                     return;
                 case LaiLifeStage.Egg:
-                    lifeStageComponent = new LaiStageEgg(this);
+                    LifeStageComponent = new LaiStageEgg(this);
                     break;
                 case LaiLifeStage.Larva:
-                    lifeStageComponent = new LaiStageLarva(this);
+                    LifeStageComponent = new LaiStageLarva(this);
                     break;
                 case LaiLifeStage.Chrysalis:
-                    lifeStageComponent = new LaiStageChrysalis(this);
+                    LifeStageComponent = new LaiStageChrysalis(this);
                     break;
                 case LaiLifeStage.FullyGrown:
-                    lifeStageComponent = new LaiStageAdult(this);
+                    LifeStageComponent = new LaiStageAdult(this);
                     break;
             }
 
@@ -54,12 +54,12 @@ namespace Momu
         {
             base.PostSpawnSetup(respawningAfterLoad);
 
-            lifeStageComponent.PostSpawnSetup(this, respawningAfterLoad);
+            LifeStageComponent.PostSpawnSetup(this, respawningAfterLoad);
         }
 
         public override string CompInspectStringExtra()
         {
-            string inspectString = lifeStageComponent.GetInspectionString();
+            string inspectString = LifeStageComponent.GetInspectionString();
 
             // Check if there's actually a return string
             if (inspectString.NullOrEmpty())
@@ -73,18 +73,18 @@ namespace Momu
         public override void CompTick()
         {
             // Regular comptick
-            lifeStageComponent.CompTick(this);
+            LifeStageComponent.CompTick(this);
 
             // Rare comptick
             if (parent.IsHashIntervalTick(250))
-                lifeStageComponent.CompTickRare(this);
+                LifeStageComponent.CompTickRare(this);
 
             base.CompTick();
         }
 
         internal void PostGeneratePawn()
         {
-            lifeStageComponent.PostGeneratePawn(this);
+            LifeStageComponent.PostGeneratePawn(this);
         }
     }
 }

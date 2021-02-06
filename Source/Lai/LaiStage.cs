@@ -41,11 +41,16 @@ namespace Momu
                     bioAge: Parent.ageTracker.AgeBiologicalYearsFloat, 
                     chronoAge: Parent.ageTracker.AgeChronologicalYearsFloat));
 
+            HandleEvolveDiffs(Parent, ref newPawn);
+
             Parent.Destroy();
 
             GenSpawn.Spawn(newPawn, oldPawnPos, oldMap);
             SoundDefOf.Hive_Spawn.PlayOneShot(new TargetInfo(oldPawnPos, oldMap));
         }
+
+        protected virtual void HandleEvolveDiffs(Pawn oldPawn, ref Pawn newPawn)
+        { return; }
 
         public virtual void CompTick(CompLai compInstance)
         { 
