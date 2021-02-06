@@ -1,10 +1,6 @@
 ﻿using RimWorld;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine;
 using Verse;
 using Verse.AI;
 
@@ -68,17 +64,13 @@ namespace Momu
 
                         if (pawn.IsHashIntervalTick(100) && !pawn.Position.Fogged(pawn.Map))
                         {
-                            if (this.asleep)
-                            {
-                                MoteMaker.ThrowMetaIcon(pawn.Position, pawn.Map, ThingDefOf.Mote_SleepZ);
-                            }
                             if (pawn.health.hediffSet.GetNaturallyHealingInjuredParts().Any<BodyPartRecord>())
                             {
                                 MoteMaker.ThrowMetaIcon(pawn.Position, pawn.Map, ThingDefOf.Mote_HealingCross);
                             }
                         }
-                        #endregion Original RW Code
-                    },
+                        #endregion Original RW Code                   
+                    }
             };
 
             toil.FailOnBedNoLongerUsable(TargetIndex.A);
