@@ -1,32 +1,36 @@
-﻿/* LaiStage.cs
+﻿/* \Lai\LaiStage.cs
  * Momu by Rekasa
  * 
  * Created by IAmMiko.
+ * 
+ * Describes an abstract class that represents a LaiStage and all of its basic components.
  */
 
-namespace Momu
+namespace Momu.Lai
 {
     using RimWorld;
-    using UnityEngine;
     using Verse;
     using Verse.Sound;
 
     public abstract class LaiStage
     {
-        protected CompLai ParentComp;
-        protected int LifeStageTicks; // In RareTicks
+        protected CompLifeStages ParentComp;
+        /// <summary>Current life stage ticks.</summary>
+        protected int LifeStageTicks; 
 
         protected Pawn Parent => ParentComp.parent as Pawn;
         protected bool ShouldEvolve
+            // Only advance to the next lifestage if the pawn is ready chronologically, and if there's a defined def for the next stage.
             => LifeStageTicks >= ParentComp.Props.lifeStageTicks && 
-               ParentComp.Props.nextLifeStage != LaiLifeStage.None;
+               ParentComp.Props.nextPawn != null;
         
-        protected LaiStage(CompLai comp)
+        protected LaiStage(CompLifeStages comp)
         {
             ParentComp = comp;
             LifeStageTicks = 0;
         }
 
+        /// <summary>Advance to the next lifestage.</summary>
         private void EvolveNow()
         {
             ThingDef nextStage = ParentComp.Props.nextPawn;
@@ -49,27 +53,21 @@ namespace Momu
             SoundDefOf.Hive_Spawn.PlayOneShot(new TargetInfo(oldPawnPos, oldMap));
         }
 
+        /// <summary>Handle the difference when a pawn transforms to the next stage.</summary>
         protected virtual void HandleEvolveDiffs(Pawn oldPawn, ref Pawn newPawn)
         { return; }
 
-        public virtual void CompTick(CompLai compInstance)
+        /// <summary>Called when the pawn finishes generating.</summary>
+        public virtual void PostGeneratePawn(CompLifeStages compInstance)
+        { return; }
+
+        public virtual void CompTick(CompLifeStages compInstance)
         { 
             ++LifeStageTicks; 
         }
 
-        public virtual void CompTickRare(CompLai compInstance)
-        {
-            if (ShouldEvolve)
-            {
-                EvolveNow();
-            }
-        }
-
-        public virtual void PostGeneratePawn(CompLai compInstance)
-        {
-            Parent.health.AddHediff(LaiDefOf.LarvaHediff);
-        }
-
+        /// <summary>Tailor the next pawn based on a PawnGenerationRequest.</summary>
+        /// <see cref="PawnGenerationRequest"/>
         public virtual PawnGenerationRequest TailorPawnNext(string defName, Faction faction, string name, float bioAge, float chronoAge)
             => new PawnGenerationRequest(
                 kind: PawnKindDef.Named(defName),
@@ -81,8 +79,20 @@ namespace Momu
                 fixedBiologicalAge: bioAge,
                 fixedChronologicalAge: chronoAge);
 
-        public abstract void PostSpawnSetup(CompLai compLai, bool respawningAfterLoad);
-        public abstract void PostExposeData(CompLai compInstance);
+        public virtual void CompTickRare(CompLifeStages compInstance)
+        {
+            if (ShouldEvolve)
+            {
+                EvolveNow();
+            }
+        }
+
+        public virtual void PostExposeData()
+        {
+            Scribe_Values.Look(ref LifeStageTicks, @"LifeStageTicks", 0);
+        }
+
+        public abstract void PostSpawnSetup(CompLifeStages compLai, bool respawningAfterLoad);
         public abstract string GetInspectionString();
     }
 }

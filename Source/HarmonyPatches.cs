@@ -16,6 +16,7 @@ namespace Momu
     using RimWorld;
     using UnityEngine;
     using Verse;
+    using Momu.Lai;
 
     [StaticConstructorOnStartup]
     public static class HarmonyPatches
@@ -80,11 +81,23 @@ namespace Momu
 
         public static void PawnGenerator__GeneratePawnPostfix(PawnGenerationRequest request, ref Pawn __result)
         {
-            var laiComp = __result.GetComp<CompLai>();
+            var laiComp = __result.GetComp<CompLifeStages>();
 
             if (!(laiComp is null))
             {
                 laiComp.PostGeneratePawn();
+            }
+        }
+
+        private struct ShouldNeedValidatorArgs
+        {
+            public readonly NeedDef NeedDef;
+            public readonly ThingDef ThingDef;
+
+            public ShouldNeedValidatorArgs(NeedDef needDef, ThingDef thingDef)
+            {
+                NeedDef = needDef;
+                ThingDef = thingDef;
             }
         }
 
@@ -96,15 +109,24 @@ namespace Momu
                         .GetField(@"pawn", BindingFlags.NonPublic | BindingFlags.Instance)
                         .GetValue(__instance) as Pawn;
 
-            // Check if it's a Momu
+            // Check if it's from the Momu mod
             if (p.def == MomuDefOf.Alien_Momu)
-            {
+            {   // It's a Momu
                 if (nd == MomuDefOf.Outdoors)
                     __result = false;
 
                 if (nd == MomuDefOf.MomuNeedOutdoors)
                     // Our own Momu outdoor need.
                     __result = true;
+            }
+            else if(p.def == LaiDefOf.Momu_Lai_Chrysalis)
+            {   // It's a Lai Chrysalis, and they don't have any needs.
+
+                if(nd == NeedDefOf.Food)
+                    __result = false;
+
+                if (nd == NeedDefOf.Rest)
+                    __result = false;
             }
         }
 

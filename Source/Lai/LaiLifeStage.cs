@@ -1,17 +1,15 @@
-﻿/* LaiLifeStage.cs
+﻿/* \Lai\LaiLifeStage.cs
  * Momu by Rekasa
  *
  * Created by Emiko.
  */
 
-namespace Momu
+namespace Momu.Lai
 {
     public enum LaiLifeStage
     {
         None,
-        Egg,
         Larva,
         Chrysalis,
-        FullyGrown
     }
 }

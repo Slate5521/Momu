@@ -6,7 +6,7 @@
     <thinkRoot Class="ThinkNode_Priority">
       <subNodes>
 
-        <li Class="Momu.JobGiver_Metamorphosis" />
+        <li Class="Momu.Lai.JobGiver_Metamorphosis" />
 
         <!-- React to close melee threat -->
         <li Class="JobGiver_ReactToCloseMeleeThreat" />

@@ -1,4 +1,4 @@
-﻿/* ThoughtWorker_MomuWorkWithFriends.cs
+﻿/* \ThoughtWorkers\ThoughtWorker_MomuWorkWithFriends.cs
  * Momu by Rekasa
  *
  * Originally created by Ogliss.

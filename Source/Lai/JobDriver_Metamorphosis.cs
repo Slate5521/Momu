@@ -1,16 +1,26 @@
-﻿using RimWorld;
-using System.Collections.Generic;
-using System.Linq;
-using Verse;
-using Verse.AI;
+﻿/* \Lai\JobDriver_Metamorphosis.cs
+ * Momu by Rekasa
+ *
+ * Created by Emiko.
+ * 
+ * Describes a JobDriver that gives a metamorphosis job to a Lai Chrysalis. The only thing it does is lay there and put itself into a laying down
+ * posture so that it heals itself. 
+ */ /// <see cref="LaiStageChrysalis"/>
 
-namespace Momu
+
+namespace Momu.Lai
 {
-    public class JobDriver_Metamorphosis : JobDriver
-    {
-        Building_Bed Bed => this.job.GetTarget(TargetIndex.A).Thing as Building_Bed;
+    using RimWorld;
+    using System.Collections.Generic;
+    using System.Linq;
+    using Verse;
+    using Verse.AI;
 
+    /// <see cref="JobGiver_Metamorphosis"/>
+    public class JobDriver_Metamorphosis : JobDriver
+    {   
         public override bool TryMakePreToilReservations(bool errorOnFailed)
+            // Check if our bed exists, and if it does, either make sure it's reserved already or is presently reserved.
             => job.GetTarget(TargetIndex.A).HasThing &&
                (ReservationUtility.HasReserved(pawn, TargetA, job) || ReservationUtility.Reserve(pawn, TargetA, job));
 
@@ -38,6 +48,7 @@ namespace Momu
                             base.ReadyForNextToil();
                         }
 
+                        // Set our posture to laying in bed so we aren't downed.
                         pawn.jobs.posture = PawnPosture.LayingInBed;
                         this.asleep = false;
                     },
@@ -47,21 +58,9 @@ namespace Momu
                 tickAction = 
                     delegate
                     {
-                        // Heal the pawn
+                        // If the pawn is in bed spawn a healing mote.
                         #region Original RW Code
-                        float restEffectiveness;
                         
-                        if (Bed != null && Bed.def.statBases.StatListContains(StatDefOf.BedRestEffectiveness))
-                        {
-                            restEffectiveness = Bed.GetStatValue(StatDefOf.BedRestEffectiveness, true);
-                        }
-                        else
-                        {
-                            restEffectiveness = StatDefOf.BedRestEffectiveness.valueIfMissing;
-                        }
-
-                        pawn.needs.rest.TickResting(restEffectiveness);
-
                         if (pawn.IsHashIntervalTick(100) && !pawn.Position.Fogged(pawn.Map))
                         {
                             if (pawn.health.hediffSet.GetNaturallyHealingInjuredParts().Any<BodyPartRecord>())
@@ -69,6 +68,7 @@ namespace Momu
                                 MoteMaker.ThrowMetaIcon(pawn.Position, pawn.Map, ThingDefOf.Mote_HealingCross);
                             }
                         }
+
                         #endregion Original RW Code                   
                     }
             };

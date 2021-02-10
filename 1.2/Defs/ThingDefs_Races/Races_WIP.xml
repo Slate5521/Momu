@@ -98,7 +98,7 @@
       </li>
     </tools>
 		<comps>
-			<li Class="Momu.CompProperties_Lai">
+			<li Class="Momu.Lai.CompProperties_Lai">
 				<lifeStageTicks>60000</lifeStageTicks>
 				<lifeStage>Larva</lifeStage>
 				<nextLifeStage>Chrysalis</nextLifeStage>
@@ -255,10 +255,9 @@
       </li>
     </tools>
 		<comps>
-			<li Class="Momu.CompProperties_Lai">
+			<li Class="Momu.Lai.CompProperties_Lai">
 				<lifeStageTicks>60000</lifeStageTicks>
 				<lifeStage>Chrysalis</lifeStage>
-				<nextLifeStage>FullyGrown</nextLifeStage>
 				<nextPawn>Momu_Lai_Adult</nextPawn>
 			</li>
 		</comps>

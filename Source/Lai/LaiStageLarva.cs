@@ -1,10 +1,10 @@
-﻿/* LaiStageLarva.cs
+﻿/* \Lai\LaiStageLarva.cs
  * Momu by Rekasa
  * 
  * Created by IAmMiko.
  */
 
-namespace Momu
+namespace Momu.Lai
 {
     using RimWorld;
     using UnityEngine;
@@ -12,22 +12,17 @@ namespace Momu
 
     public class LaiStageLarva : LaiStage
     {
-        public LaiStageLarva(CompLai comp) : base(comp) { }
+        public LaiStageLarva(CompLifeStages comp) : base(comp) { }
 
-        public override void PostExposeData(CompLai compInstance)
-        { 
-            Scribe_Values.Look(ref LifeStageTicks, @"LifeStageTicks", 0);
-        }
-
-        public override void PostSpawnSetup(CompLai compLai, bool respawningAfterLoad) { }
-        public override void PostGeneratePawn(CompLai compInstance) 
+        public override void PostSpawnSetup(CompLifeStages compLai, bool respawningAfterLoad) { }
+        public override void PostGeneratePawn(CompLifeStages compInstance) 
         {
             Parent.health.AddHediff(LaiDefOf.LarvaHediff);
         }
 
         protected override void HandleEvolveDiffs(Pawn oldPawn, ref Pawn newPawn)
         {
-            (newPawn.GetComp<CompLai>().LifeStageComponent as LaiStageChrysalis).Notify_PreEvolveCircumstances(oldPawn.CurrentBed());
+            (newPawn.GetComp<CompLifeStages>().LifeStageComponent as LaiStageChrysalis).Notify_PreEvolveCircumstances(oldPawn.CurrentBed());
         }
 
         public override string GetInspectionString()

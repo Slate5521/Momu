@@ -1,16 +1,17 @@
-﻿/* CompLai.cs
+﻿/* \Lai\Components\CompLifestages.cs
  * Momu by Rekasa
  *
  * Created by IAmMiko.
-*/
+ * 
+ * Describes a component that allows a pawn to morph into an indefinite amount of different pawns throughout its lifetime.
+ */
 
-namespace Momu
+namespace Momu.Lai
 {
     using Verse;
     using UnityEngine;
-    using System;
-
-    public class CompLai : ThingComp
+    
+    public class CompLifeStages : ThingComp
     {
         // Using an interface so we can have a single comp but with different behavior sets that change based on the lifestage.
         public LaiStage LifeStageComponent { get; protected set; }
@@ -19,7 +20,7 @@ namespace Momu
 
         public override void PostExposeData()
         {
-            LifeStageComponent.PostExposeData(this);
+            LifeStageComponent.PostExposeData();
             base.PostExposeData();
         }
 
@@ -33,17 +34,11 @@ namespace Momu
                 case LaiLifeStage.None:
                     Debug.LogError("[Momu] Tried to initialize CompLai with LaiLifeStage.None or default enum value!");
                     return;
-                case LaiLifeStage.Egg:
-                    LifeStageComponent = new LaiStageEgg(this);
-                    break;
                 case LaiLifeStage.Larva:
                     LifeStageComponent = new LaiStageLarva(this);
                     break;
                 case LaiLifeStage.Chrysalis:
                     LifeStageComponent = new LaiStageChrysalis(this);
-                    break;
-                case LaiLifeStage.FullyGrown:
-                    LifeStageComponent = new LaiStageAdult(this);
                     break;
             }
 

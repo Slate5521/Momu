@@ -1,31 +1,26 @@
-﻿using RimWorld;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine;
-using Verse;
-using Verse.AI;
+﻿/* \Lai\LaiStageChrysalis.cs
+ * Momu by Rekasa
+ * 
+ * Created by IAmMiko.
+ */
 
-namespace Momu
+namespace Momu.Lai
 {
+    using RimWorld;
+    using UnityEngine;
+    using Verse;
+
     public class LaiStageChrysalis : LaiStage
     {
         public Building_Bed previousBed;
-        public LaiStageChrysalis(CompLai comp) : base(comp) { }
-
-        public override void PostExposeData(CompLai compInstance)
-        {
-            Scribe_Values.Look(ref LifeStageTicks, @"LifeStageTicks", 0);
-        }
+        public LaiStageChrysalis(CompLifeStages comp) : base(comp) { }
 
         public void Notify_PreEvolveCircumstances(Building_Bed bed)
             => previousBed = bed;
 
-        public override void PostSpawnSetup(CompLai compLai, bool respawningAfterLoad) { }
+        public override void PostSpawnSetup(CompLifeStages compLai, bool respawningAfterLoad) { }
 
-        public override void PostGeneratePawn(CompLai compInstance)
+        public override void PostGeneratePawn(CompLifeStages compInstance)
         {
             Parent.health.AddHediff(LaiDefOf.ChrysalisHediff);
         }

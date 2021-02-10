@@ -1,4 +1,4 @@
-﻿/* CompProperties_ApparelBodyRestrictions.cs
+﻿/* \Components\CompProperties_ApparelBodyRestrictions.cs
  * Momu by Rekasa
  *
  * Originally created by Ogliss.
@@ -10,6 +10,7 @@ namespace Momu
     using RimWorld;
     using Verse;
 
+    /// <see cref="CompApparelBodyRestriction"/>
     public class CompProperties_ApparelBodyRestriction : CompProperties
     {
         public CompProperties_ApparelBodyRestriction() => this.compClass = typeof(CompApparelBodyRestriction);

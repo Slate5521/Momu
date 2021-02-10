@@ -1,4 +1,4 @@
-﻿/* CompApparelBodyRestrictions.cs
+﻿/* \ThoughtWorkers\CompApparelBodyRestrictions.cs
  * Momu by Rekasa
  * 
  * This class is for creating a customized Outdoors need for the Momu. They don't get negative moodlets from being inside too quickly.
