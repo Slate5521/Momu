@@ -16,7 +16,7 @@ namespace Momu.Lai
         // Using an interface so we can have a single comp but with different behavior sets that change based on the lifestage.
         public LaiStage LifeStageComponent { get; protected set; }
 
-        public CompProperties_Lai Props => (CompProperties_Lai)this.props;
+        public CompProperties_LaiLifeStage Props => (CompProperties_LaiLifeStage)this.props;
 
         public override void PostExposeData()
         {
@@ -26,7 +26,7 @@ namespace Momu.Lai
 
         public override void Initialize(CompProperties props)
         {
-            var laiCompProps = props as CompProperties_Lai;
+            var laiCompProps = props as CompProperties_LaiLifeStage;
 
             switch (laiCompProps.lifeStage)
             {

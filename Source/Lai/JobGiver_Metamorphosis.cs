@@ -28,6 +28,10 @@ namespace Momu.Lai
             Building_Bed curBed = pawn.CurrentBed() ?? 
                 (pawn.GetComp<CompLifeStages>().LifeStageComponent as LaiStageChrysalis).previousBed;
 
+            // If there's no bed to begin with, there's no point.
+            if (curBed is null)
+                return null;
+
             return JobMaker.MakeJob(LaiDefOf.Metamorphosing, curBed);
         }
 

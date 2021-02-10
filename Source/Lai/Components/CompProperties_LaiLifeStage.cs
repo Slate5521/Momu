@@ -10,9 +10,9 @@ namespace Momu.Lai
 
     /// <see cref="CompLifeStages"/>
     /// <see cref="LaiStage"/>
-    public class CompProperties_Lai : CompProperties
+    public class CompProperties_LaiLifeStage : CompProperties
     {
-        public CompProperties_Lai() => this.compClass = typeof(CompLifeStages);
+        public CompProperties_LaiLifeStage() => this.compClass = typeof(CompLifeStages);
 
         /// <summary>Current lifestage of the Lai.</summary>
         public LaiLifeStage lifeStage = LaiLifeStage.None;
