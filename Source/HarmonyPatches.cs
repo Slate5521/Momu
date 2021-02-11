@@ -14,7 +14,6 @@ namespace Momu
     using System.Reflection;
     using HarmonyLib;
     using RimWorld;
-    using UnityEngine;
     using Verse;
     using Momu.Lai;
 
@@ -73,10 +72,8 @@ namespace Momu
                 original: AccessTools.Method(
                     type: typeof(PawnGenerator),
                     name: @"GeneratePawn",
-                    parameters: new Type[] { typeof(PawnGenerationRequest) }),
+                    parameters: new[] { typeof(PawnGenerationRequest) }),
                 postfix: new HarmonyMethod(harmonyPatch, nameof(PawnGenerator__GeneratePawnPostfix)));
-
-
         }
 
         public static void PawnGenerator__GeneratePawnPostfix(PawnGenerationRequest request, ref Pawn __result)
@@ -86,18 +83,6 @@ namespace Momu
             if (!(laiComp is null))
             {
                 laiComp.PostGeneratePawn();
-            }
-        }
-
-        private struct ShouldNeedValidatorArgs
-        {
-            public readonly NeedDef NeedDef;
-            public readonly ThingDef ThingDef;
-
-            public ShouldNeedValidatorArgs(NeedDef needDef, ThingDef thingDef)
-            {
-                NeedDef = needDef;
-                ThingDef = thingDef;
             }
         }
 

@@ -1,4 +1,4 @@
-﻿/* \Lai\Components\CompProperties_Lai.cs
+﻿/* \Lai\Components\CompProperties_LaiLifeStage.cs
  * Momu by Rekasa
  *
  * Created by Emiko.

@@ -15,6 +15,7 @@ namespace Momu.Lai
         public static ThingDef Momu_Lai_Egg_Fertilized;
         public static ThingDef Momu_Lai_Larva;
         public static ThingDef Momu_Lai_Chrysalis;
+        public static ThingDef Momu_Lai_Adult;
 
         public static HediffDef LarvaHediff;
         public static HediffDef ChrysalisHediff;

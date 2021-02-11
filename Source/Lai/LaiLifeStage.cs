@@ -10,6 +10,6 @@ namespace Momu.Lai
     {
         None,
         Larva,
-        Chrysalis,
+        Chrysalis
     }
 }

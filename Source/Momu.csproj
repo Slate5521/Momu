@@ -39,14 +39,17 @@
   <ItemGroup>
     <Compile Include="ColorGenerator_MomuTones.cs" />
     <Compile Include="Components\CompApparelBodyRestriction.cs" />
+    <Compile Include="Lai\Components\CompLai.cs" />
     <Compile Include="Lai\Components\CompLifeStages.cs" />
     <Compile Include="Lai\Components\CompProperties_Lai.cs" />
+    <Compile Include="Lai\Components\CompProperties_LaiLifeStage.cs" />
     <Compile Include="Components\CompProperties_ApparelBodyRestriction.cs" />
     <Compile Include="HarmonyPatches.cs" />
     <Compile Include="Lai\JobDriver_Metamorphosis.cs" />
     <Compile Include="Lai\JobGiver_Metamorphosis.cs" />
     <Compile Include="Lai\LaiDefs.cs" />
     <Compile Include="Lai\LaiLifeStage.cs" />
+    <Compile Include="Lai\LaiPathFinder.cs" />
     <Compile Include="Lai\LaiStage.cs" />
     <Compile Include="Lai\LaiStageChrysalis.cs" />
     <Compile Include="Lai\LaiStageLarva.cs" />

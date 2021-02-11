@@ -101,7 +101,6 @@
 			<li Class="Momu.Lai.CompProperties_LaiLifeStage">
 				<lifeStageTicks>60000</lifeStageTicks>
 				<lifeStage>Larva</lifeStage>
-				<nextLifeStage>Chrysalis</nextLifeStage>
 				<nextPawn>Momu_Lai_Chrysalis</nextPawn>
 			</li>
 		</comps>
@@ -429,6 +428,7 @@
 				<eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>
 				<eggCountRange>2~5</eggCountRange>
 			</li>
+			<li Class="Momu.Lai.CompProperties_Lai" />
 		</comps>
 		<race>
 		<!-- Wild Lai are pretty rare. Some comparison values are 1.0 for Hares in Temperate biomes, and 0.07 for Grizzly Bears in Cold biomes.-->
