@@ -49,7 +49,6 @@
     <Compile Include="Lai\JobGiver_Metamorphosis.cs" />
     <Compile Include="Lai\LaiDefs.cs" />
     <Compile Include="Lai\LaiLifeStage.cs" />
-    <Compile Include="Lai\LaiPathFinder.cs" />
     <Compile Include="Lai\LaiStage.cs" />
     <Compile Include="Lai\LaiStageChrysalis.cs" />
     <Compile Include="Lai\LaiStageLarva.cs" />
